@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+  </head>
+  <body>
+    <h1>Tables in html</h1>
+    <!-- Table tags:
+         Table: <table>
+        Heading: <th> - table heading
+        caption: <caption>
+        Row: <tr> -table row
+        Cell: <td> -table data -->
+
+    <table border="1" cellpadding="5" cellspacing="1">
+      <caption>
+        This is caption
+      </caption>
+      <tr>
+        <th>Heading 1</th>
+        <th>Heading 2</th>
+        <th>Heading 3</th>
+      </tr>
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+        <td>Row1 cell3</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+        <td>Row2 cell3</td>
+      </tr>
+      <tr>
+        <td>Row3 cell1</td>
+        <td>Row3 cell2</td>
+        <td>Row3 cell3</td>
+      </tr>
+    </table>
+
+    <p>1. No heading, No caption, No border :</p>
+    <table>
+      <!-- 1st row -->
+      <tr>
+        <td>Aulto</td>
+        <!-- table cell-->
+        <td>Maruti</td>
+        <!-- table cell-->
+      </tr>
+      <!-- 2nd row -->
+      <tr>
+        <td>Thar</td>
+        <td>Mhindra</td>
+      </tr>
+      <!-- 3rd row -->
+      <tr>
+        <td>Sonet</td>
+        <td>KIA</td>
+      </tr>
+    </table>
+
+    <p>2. Table with Heading :</p>
+    <table>
+      <!-- row for heading -->
+      <tr>
+        <th>Car Name</th>
+        <th>Company</th>
+      </tr>
+      <tr>
+        <td>Aulto</td>
+        <!-- table cell-->
+        <td>Maruti</td>
+        <!-- table cell-->
+      </tr>
+      <!-- 2nd row -->
+      <tr>
+        <td>Thar</td>
+        <td>Mhindra</td>
+      </tr>
+      <!-- 3rd row -->
+      <tr>
+        <td>Sonet</td>
+        <td>KIA</td>
+      </tr>
+    </table>
+
+    <p>3. Table with Heading and Caption:</p>
+    <table>
+      <!-- caption -->
+      <caption>
+        Cars and their conmpany details
+      </caption>
+      <tr>
+        <th>Car Name</th>
+        <th>Company</th>
+      </tr>
+      <tr>
+        <td>Aulto</td>
+        <!-- table cell-->
+        <td>Maruti</td>
+        <!-- table cell-->
+      </tr>
+      <!-- 2nd row -->
+      <tr>
+        <td>Thar</td>
+        <td>Mhindra</td>
+      </tr>
+      <!-- 3rd row -->
+      <tr>
+        <td>Sonet</td>
+        <td>KIA</td>
+      </tr>
+    </table>
+
+    <p>4. Table with Border :</p>
+    <table border="1">
+      <!-- caption -->
+      <caption>
+        Cars and their conmpany details
+      </caption>
+      <tr>
+        <th>Car Name</th>
+        <th>Company</th>
+      </tr>
+      <tr>
+        <td>Aulto</td>
+        <!-- table cell-->
+        <td>Maruti</td>
+        <!-- table cell-->
+      </tr>
+      <!-- 2nd row -->
+      <tr>
+        <td>Thar</td>
+        <td>Mhindra</td>
+      </tr>
+      <!-- 3rd row -->
+      <tr>
+        <td>Sonet</td>
+        <td>KIA</td>
+      </tr>
+    </table>
+
+    <p>5. Table with Border : css style</p>
+    <style>
+      .bdr {
+        border: 1px solid black;
+      }
+    </style>
+    <table>
+      <!-- caption -->
+      <caption>
+        Cars and their conmpany details
+      </caption>
+      <tr class="bdr">
+        <th class="bdr">Car Name</th>
+        <th class="bdr">Company</th>
+      </tr>
+      <tr>
+        <td class="bdr">Aulto</td>
+        <!-- table cell-->
+        <td class="bdr">Maruti</td>
+        <!-- table cell-->
+      </tr>
+      <!-- 2nd row -->
+      <tr>
+        <td class="bdr">Thar</td>
+        <td class="bdr">Mhindra</td>
+      </tr>
+      <!-- 3rd row -->
+      <tr>
+        <td class="bdr">Sonet</td>
+        <td class="bdr">KIA</td>
+      </tr>
+    </table>
+
+    <p>
+      6. Cell padding AND Cell spacing attribute : cellpadding and cellspacing
+    </p>
+    <table border="1" cellpadding="10" cellspacing="10">
+      <!-- caption -->
+      <caption>
+        Cars and their conmpany details
+      </caption>
+      <tr>
+        <th>Car Name</th>
+        <th>Company</th>
+      </tr>
+      <tr>
+        <td>Aulto</td>
+        <!-- table cell-->
+        <td>Maruti</td>
+        <!-- table cell-->
+      </tr>
+      <!-- 2nd row -->
+      <tr>
+        <td>Thar</td>
+        <td>Mhindra</td>
+      </tr>
+      <!-- 3rd row -->
+      <tr>
+        <td>Sonet</td>
+        <td>KIA</td>
+      </tr>
+    </table>
+  </body>
+</html>

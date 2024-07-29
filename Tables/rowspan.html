@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Row span</title>
+  </head>
+  <body>
+    <h1>Row Span: rowspan</h1>
+    <p>To span the cells over multiple rows. rowspan is used.</p>
+
+    <table border="1" cellpadding="5" cellspacing="1">
+      <caption>
+        This is caption
+      </caption>
+      <tr>
+        <th>Heading1</th>
+        <th>Heading2</th>
+        <th>Heading3</th>
+      </tr>
+      <tr>
+        <td>Row1 Cell1</td>
+        <td>Row1 Cell2</td>
+        <td>Row1 Cell3</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Row2 Cell1</td>
+        <td>Row2 Cell2</td>
+        <td rowspan="2">Row2 Cell3</td>
+      </tr>
+      <tr>
+        <!-- <td>Row3 Cell1</td> -->
+        <td>Row3 Cell2</td>
+        <!-- <td>Row3 Cell3</td> -->
+      </tr>
+      <tr>
+        <!-- <td>Row4 Cell1</td> -->
+        <td>Row4 Cell2</td>
+        <td>Row4 Cell3</td>
+      </tr>
+    </table>
+
+    <h4>Example :</h4>
+    <table border="1" cellspacing="1" cellpadding="5">
+      <caption>
+        Companies and their Cars
+      </caption>
+      <tr>
+        <th>Company</th>
+        <th>Car</th>
+      </tr>
+      <tr>
+        <td rowspan="4">Suzuki</td>
+        <td>Aulto 800</td>
+      </tr>
+      <tr>
+        <td>Swift</td>
+      </tr>
+      <tr>
+        <td>Baleno</td>
+      </tr>
+      <tr>
+        <td>Brezza</td>
+      </tr>
+      <tr>
+        <td rowspan="4">Mahindra</td>
+        <td>Thar</td>
+      </tr>
+      <tr>
+        <td>XUV 700</td>
+      </tr>
+      <tr>
+        <td>XUV 400</td>
+      </tr>
+      <tr>
+        <td>Scorpio Classic</td>
+      </tr>
+    </table>
+
+    <h4>Example : 2</h4>
+    <table border="1" cellspacing="1" cellpadding="5">
+      <caption>
+        Companies and their Cars
+      </caption>
+      <tr>
+        <th>Company</th>
+        <th>Car</th>
+        <th>Company</th>
+        <th>Car</th>
+      </tr>
+      <tr>
+        <td rowspan="4">Suzuki</td>
+        <td>Aulto 800</td>
+        <td rowspan="3">TATA</td>
+        <td>Tiago</td>
+      </tr>
+      <tr>
+        <td>Swift</td>
+        <td>Punch</td>
+      </tr>
+      <tr>
+        <td>Baleno</td>
+        <td>Nexon</td>
+      </tr>
+      <tr>
+        <td>Brezza</td>
+        <td rowspan="2">Toyota</td>
+        <td>Land Cruiser</td>
+      </tr>
+      <tr>
+        <td rowspan="4">Mahindra</td>
+        <td>Thar</td>
+        <td>Fortuner</td>
+      </tr>
+      <tr>
+        <td>XUV 700</td>
+        <td rowspan="3">KIA</td>
+        <td>Sonet</td>
+      </tr>
+      <tr>
+        <td>XUV 400</td>
+        <td>Seltos</td>
+      </tr>
+      <tr>
+        <td>Scorpio Classic</td>
+        <td>EUV 6</td>
+      </tr>
+    </table>
+  </body>
+</html>

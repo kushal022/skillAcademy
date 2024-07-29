@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Colspan</title>
+  </head>
+  <body>
+    <h1>Table Colspan</h1>
+    <p>To span the cells over multiple colums.colspan is used.</p>
+
+    <table border="1" cellpadding="5" cellspacing="1">
+      <caption>
+        This is caption
+      </caption>
+      <tr>
+        <th>Heading 1</th>
+        <th>Heading 2</th>
+        <th>Heading 3</th>
+      </tr>
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+        <td>Row1 cell3</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+        <td>Row2 cell3</td>
+      </tr>
+      <tr>
+        <td colspan="3">Row3 cell1: colspan, 3cell=1</td>
+      </tr>
+    </table>
+
+    <h4>Example:</h4>
+    <table border="1" cellspacing="1" cellpadding="5">
+      <caption>
+        Employee Savings
+      </caption>
+      <tr>
+        <th>Savings</th>
+        <th>Month</th>
+        <th>Year</th>
+      </tr>
+      <tr>
+        <td>1000</td>
+        <td>June</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>2000</td>
+        <td>July</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>1000</td>
+        <td>Aug</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>1000</td>
+        <td>Sep</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>1000</td>
+        <td>Oct</td>
+        <td>2024</td>
+      </tr>
+      <!-- colspan -->
+      <tr>
+        <td colspan="3">Total Savings: 6000</td>
+      </tr>
+    </table>
+  </body>
+</html>

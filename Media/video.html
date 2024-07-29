@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media- Video</title>
+  </head>
+  <body>
+    <h1>Media- Video in html</h1>
+    <p>First syntax :</p>
+    <video width="400" height="250" controls>
+      <source src="punchaytVideo.mp4" type="video/mp4" />
+      your browser does not support the audio element.
+    </video>
+
+    <p>Second syntax :</p>
+    <video
+      src="punchaytVideo.mp4"
+      width="400"
+      height="250"
+      type="video/mp4"
+      controls
+    >
+      your browser does not support the audio element.
+    </video>
+
+    <p>Without 'controls' attribute :</p>
+    <video width="400" height="250">
+      <source src="punchaytVideo.mp4" type="video/mp4" />
+      your browser does not support the audio element.
+    </video>
+
+    <p>Without 'controls' attribute but 'autoplay' attribute :</p>
+    <video width="400" height="250" autoplay>
+      <source src="punchaytVideo.mp4" type="video/mp4" />
+      your browser does not support the audio element.
+    </video>
+
+    <p>With 'controls' & 'autoplay' attribute :</p>
+    <video width="400" height="250" controls autoplay>
+      <source src="punchaytVideo.mp4" type="video/mp4" />
+      your browser does not support the audio element.
+    </video>
+  </body>
+</html>
