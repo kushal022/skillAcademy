@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>problem 4</title>
+  </head>
+  <body>
+    <h2>Problem 4:</h2>
+    <p>
+      Create a survey form with input text box (type = text, number, email,
+      password....), textarea, dropdown, labels and buttons.Use placeholder
+      attributes.
+    </p>
+    <hr />
+    <form action="">
+      <label for="name">Name</label><br />
+      <input type="text" placeholder="Enter your name" required />
+      <br /><br />
+
+      <label for="email">Email</label><br />
+      <input type="email" placeholder="Enter your email id" required />
+      <br /><br />
+
+      <label for="rollnumber">Roll No.</label><br />
+      <input type="number" placeholder="Enter your roll number" required />
+      <br /><br />
+
+      <label for="rate">How do you rate courses?</label><br />
+      <select name="rate" id="">
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="average">Average</option>
+        <option value="blow">Blow Average</option>
+      </select>
+      <br /><br />
+
+      <label for="like">Do you like the HTML course?</label><br />
+      <input type="radio" name="like" />Yes <input type="radio" name="like" />NO
+
+      <br /><br />
+      <label for="">Few words about course</label><br />
+      <textarea rows="5" cols="50" name="" id=""></textarea>
+      <br /><br />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>

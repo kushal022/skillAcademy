@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Form in HTML</h1>
+    <h3>User Registeration Form</h3>
+    <hr />
+    <br />
+    <!-- ------------------------ Input => text (type) ----------------------------------------- -->
+
+    <!-- Enter Your First Name : -->
+    <!-- or you can use label -->
+    <label for="fname">Enter Your First Name : </label>
+    <!-- label is optional in html -->
+    <!-- fname: first name-->
+    <input type="text" placeholder="Type here your name" />
+    <br /><br />
+    <!-- ----------------------- Input => Email, Placeholder, required ------------------------------------------ -->
+    <!-- placeholder : it'll prowide a hint to user. -->
+    <!-- required : used for compulsory info-->
+    Enter Your Email :
+    <input type="email" placeholder="abc@gamil.com" required />
+    <br /><br />
+    <!-- ----------------------- Input => Number------------------------------------------ -->
+    <label for="cnumber">Enter Your Contact Number : </label>
+    <input type="number" />
+    <br /><br />
+    <!-- ----------------------Input => tel (telephone) ------------------------------------------- -->
+    <!-- should contain a telephone number -->
+    Enter Your Telephone Number :
+    <input type="tel" />
+
+    <br /><br />
+    <!-- ----------------------Input => Radio button ------------------------------------------- -->
+    <!-- use to choose one option among multiple options.  -->
+    Select Your Gender :
+    <!-- <input type="radio" />Male 
+     <input type="radio" />Female 
+     <input type="radio" />Other -->
+    <!-- here select multiple option, that is wrong, so grouping these by 'name attribute' -->
+    <input type="radio" name="gender" />Male
+    <input type="radio" name="gender" />Female
+    <input type="radio" name="gender" />Other
+    <!-- now perfect we can choose only one value -->
+
+    <br /><br />
+    <!-- ----------------------- Input => Checkbox ------------------------------------------ -->
+    <!-- use to choose multiple options.  -->
+    Select Your Qualifications :
+
+    <input type="checkbox" />10th
+
+    <input type="checkbox" />12th
+
+    <input type="checkbox" />B.tech
+
+    <input type="checkbox" />Msc
+
+    <input type="checkbox" />Bsc
+
+    <input type="checkbox" />Bcom
+
+    <input type="checkbox" />BA
+
+    <input type="checkbox" />Mba
+
+    <br /><br />
+    <!--------------------------  Select ------------------------------------------ -->
+    <!-- use to create a Dropdown List -->
+    Select Your City :
+    <select name="city" id="">
+      <option value="delhi">Delhi</option>
+      <option value="mumbai">Mumbai</option>
+      <option value="bangalore">Bangalore</option>
+      <option value="jaipur">Jaipur</option>
+      <option value="pune">Pune</option>
+    </select>
+    <!-- <option> = used to creat list item
+      'value' attribute = used to database-->
+    <br /><br />
+    <!-------------------------- Textarea ------------------------------------------ -->
+    <!-- textarea : used to get large/multiple line information from user -->
+    Write a description about yourself : <br />
+    <textarea rows="" cols="60" name=""></textarea>
+    <br /><br />
+    <!-------------------------- Input => Date ------------------------------------------ -->
+    <!-- use for Date -->
+    Date Of Birth :
+    <input type="Date" />
+    <br /><br />
+    <!-- 'min' and 'max' attributes in Date:  cannot beyonde fix dates, controll date -->
+    Book Tickets:
+    <input type="Date" min="2024-08-02" max="2024-08-25" />
+    <br /><br />
+    <!-------------------------- Input => Password  ------------------------------------------ -->
+    <!-- password: masking the value in bullets dot -->
+    Choose A Username :
+    <input type="text" required />
+    <br /><br />
+    Choose A Password :
+    <input type="password" />
+    <br /><br />
+    <!-------------------------- Input => submit (button)  ------------------------------------------ -->
+    <!-- submit attribute : creat a button for submiting the values -->
+    <input type="submit" value="Click here to register" />
+    <br /><br />
+
+    <!-------------------------- <Button>  ------------------------------------------ -->
+    <!-- same as the <input> tag -->
+    <button type="button" onclick="alert('Hello world')">Click Me!</button>
+    <!-- onclick = '' (inline js event) -->
+  </body>
+</html>
