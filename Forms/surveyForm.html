@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>problem: survey form</title>
+    <style>
+      div {
+        padding-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>SURVEY FORM</h2>
+      <p>Let us know how we can improve</p>
+    </header>
+    <form action="">
+      <!-- first name -->
+      <div>
+        <label for="fname">First Name*</label><br />
+        <input type="text" id="fname" name="first_Name" value="" required />
+      </div>
+      <!-- last name -->
+      <div>
+        <label for="lname">Last Name</label><br />
+        <input type="text" id="lname" name="last_name" value="" required />
+      </div>
+      <!-- age -->
+      <div>
+        <label for="age">Age*</label><br />
+        <input type="number" id="age" name="age" />
+      </div>
+      <!-- address -->
+      <div>
+        <label for="address">Address</label><br />
+        <input
+          type="number"
+          id="address"
+          name="houseNo."
+          placeholder="House No."
+        />
+        <br /><br />
+        <input
+          type="text"
+          id=""
+          name="block/colony/area"
+          placeholder="block/colony/area"
+        />
+        <br /><br />
+
+        <label for="city">City:</label>
+        <select name="city" id="city">
+          <option value="alwar">Alwar</option>
+          <option value="jaipur">Jaipur</option>
+          <option value="jodhpur">Jodhpur</option>
+          <option value="ajmer">Ajmer</option>
+          <option value="kota">Kota</option>
+          <option value="mathura">Mathura</option>
+          <option value="bhopal">Bhopal</option>
+          <option value="pune">Pune</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="delhi">Delhi</option>
+          <option value="patiyala" selected>Patiyala</option>
+          <option value="shrinagar">Shrinagar</option>
+          <option value="rourkela">Rourkela</option>
+        </select>
+
+        <label for="state">State:</label>
+        <select name="state" id="state">
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="up">UP</option>
+          <option value="bihar">Bihar</option>
+          <option value="hariyana">Hariyana</option>
+          <option value="gujrat">Gujrat</option>
+          <option value="maharashtra">Maharashtra</option>
+          <option value="mp">MP</option>
+          <option value="karnataka">Karnataka</option>
+          <option value="goa">Goa</option>
+          <option value="punjab" selected>Punjab</option>
+          <option value="uk">UK</option>
+          <option value="odisha">Odisha</option>
+        </select>
+      </div>
+      <!-- Role Options -->
+      <div>
+        <label for="role"
+          >Which option best describes your current role? *</label
+        ><br />
+
+        <select name="role" id="role" required>
+          <option value="student">Student</option>
+          <option value="fullTimeJob">Full Time Job</option>
+          <option value="partTimeJob">Part Time Job</option>
+          <option value="fulltimelearner" selected>Full Time Learner</option>
+          <option value="preferNoToSay">Prefer no to say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <!-- recommend -->
+      <div style="padding-top: 15px">
+        <label for="recommend"
+          >How likely is that you would recommend skill academy to a friend?
+          *</label
+        ><br />
+
+        <input
+          type="radio"
+          id="recommend1"
+          name="recommend"
+          value="Definitely"
+        />
+        <label for="recommend1">Definitely</label><br />
+        <input type="radio" id="recommend2" name="recommend" value="Maybe" />
+        <label for="recommend2">Maybe</label><br />
+        <input type="radio" id="recommend3" name="recommend" value="Not sure" />
+        <label for="recommend3">Not sure</label>
+      </div>
+
+      <!-- improvment checkbox -->
+      <div>
+        <label for="improve"
+          >Things that should be improved in the future (Check all that
+          apply):</label
+        ><br />
+        <input
+          type="checkbox"
+          id="improve1"
+          name="improve"
+          value="Front-end Projects"
+        />
+        <label for="improve1">Front-end Projects</label><br />
+        <input
+          type="checkbox"
+          id="improve2"
+          name="improve"
+          value="Back-end Projects"
+        />
+        <label for="improve2">Back-end Projects</label><br />
+        <input
+          type="checkbox"
+          id="improve3"
+          name="improve"
+          value=" Data Visualization"
+        />
+        <label for="improve3">Data Visualization</label><br />
+        <input
+          type="checkbox"
+          id="improve4"
+          name="improve"
+          value="Challenges"
+        />
+        <label for="improve4">Challenges</label><br />
+        <input
+          type="checkbox"
+          id="improve5"
+          name="improve"
+          value="Open Source Community"
+        />
+        <label for="improve5">Open Source Community</label><br />
+        <input
+          type="checkbox"
+          id="improve6"
+          name="improve"
+          value="Gitter help rooms"
+        />
+        <label for="improve6">Gitter help rooms</label><br />
+        <input type="checkbox" id="improve7" name="improve" value="Videos" />
+        <label for="improve7">Videos</label><br />
+        <input
+          type="checkbox"
+          id="improve8"
+          name="improve"
+          value="City Meetups"
+        />
+        <label for="improve8">City Meetups</label><br />
+        <input type="checkbox" id="improve9" name="improve" value="Wiki" />
+        <label for="improve9">Wiki</label><br />
+        <input type="checkbox" id="improve10" name="improve" value="Forum" />
+        <label for="improve10">Forum</label><br />
+        <input
+          type="checkbox"
+          id="improve11"
+          name="improve"
+          value="Additional Courses"
+        />
+        <label for="improve11">Additional Courses</label>
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+  </body>
+</html>
