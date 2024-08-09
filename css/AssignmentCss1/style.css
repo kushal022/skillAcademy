@@ -1,0 +1,63 @@
+body {
+    background-color: #66DCDE;
+    border: solid 2px #ACB9B9;
+    padding: 10px;
+}
+
+label {
+    color: black;
+    font-size: small;
+
+}
+
+
+input {
+    margin-top: 10px;
+    font-size: 0.7rem;
+    border: groove;
+    /* border-top: none; */
+    /* background-color: #66DCDE; */
+}
+
+p {
+    font-size: small;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* css: attribute selector  */
+input[type='radio']{
+    transform: scale(0.8); /* size of radio*/
+    /* display: inline-block; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* align-items: baseline; */
+}
+
+.prof {
+    /* align-items: baseline; */
+    align-content: first baseline;
+}
+
+select {
+    font-size: 0.7rem;
+    border: groove;
+
+}
+
+textarea {
+    font-size: 0.7rem;
+    margin-top: 5px;
+    border: inset;
+
+}
+
+button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: outset;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    
+}
+

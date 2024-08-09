@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <h3>Registration Form</h3>
+        <hr>
+        <!-- details -->
+        <div class="details">
+            <label for="details">Enter your details below</label><br>
+            <label for="email">&bull;</label>
+            <input type="email" id="email" name="email" placeholder="your_email@gmail.com" required><br>
+            <label for="password">&bull;</label>
+            <input type="password" id="password" name="password" placeholder="password" required>
+
+            <p>!Type a complex password with 8-20 characters</p>
+            <label for="phone">&bull;</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 phone Number">
+        </div>
+        <hr>
+        <!-- profession -->
+        <div class="profession">
+            <h5>Enter your profession:</h5>
+            <label for="">&bull;</label>
+            <input type="radio" id="profession1" name="profession" value="student">
+            <label for="profession1" class="prof">Student</label>
+            <input type="radio" id="profession2" name="profession" value="teacher">
+            <label for="profession2" class="prof">Teacher</label>
+            <input type="radio" id="profession3" name="profession" value="developer">
+            <label for="profession3" class="prof">Developer</label>
+            <br>
+
+            <label for="student">Choose the stage if you are (student)</label>
+            <select name="stage" id="student">
+                <option value="first_primary">First Primary</option>
+                <option value="second_primary">Second Primary</option>
+                <option value="college">College</option>
+                <option value="Graduate">Graduate</option>
+            </select>
+        </div>
+        <hr>
+        
+        <label for="">&bull;</label>
+        <label for="dob">Enter your Birth date</label>
+        <input type="date" id="dob" name="DoB" min="2000-01-01" max="2016-12-31">
+        <hr>
+        <label for="note">&bull;</label>
+        <textarea name="note" id="note" cols="25" rows="1" placeholder="Any notes"></textarea>
+
+        <hr>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
