@@ -1,0 +1,82 @@
+/* Backgound Image */
+/* The property background-image is used to set the background image of an html element.
+
+By default the image covers the entire element. If the image size is small, by default theimage is repeated to cover the entire element.
+
+The image that has to be set as the background has to be located in the same projectfolder
+
+Syntax: background-image: url(“image path”); */
+
+/* Class selector */
+.bgimage {
+    color: aqua;
+    /* text color*/
+
+    /*--------------------- Image property ----------------------*/
+    /* background-image: url('https://th.bing.com/th/id/R.2dfcddfd0c3c0709dd9e40092b835c63?rik=jRne1GVkEUhK1Q&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f6%2fe%2f1%2f93090.jpg&ehk=jttOrYCM0m9kXO4V4OMaxbZYegr4ds17lcIpaLOEMlE%3d&risl=&pid=ImgRaw&r=0'); */
+    /* local image path  */
+    /* background-image: url('bg.jpg'); */
+
+    /* } */
+
+    /* Element selector */
+    /* body { */
+    background-image: url('https://wallpaperaccess.com/full/1156778.jpg');
+    background-image: url('https://th.bing.com/th/id/R.2dfcddfd0c3c0709dd9e40092b835c63?rik=jRne1GVkEUhK1Q&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f6%2fe%2f1%2f93090.jpg&ehk=jttOrYCM0m9kXO4V4OMaxbZYegr4ds17lcIpaLOEMlE%3d&risl=&pid=ImgRaw&r=0');
+
+    /*--------------------- bg repeat property ----------------------*/
+
+    /* The background image property repeats the images horizontally and vertically 
+    if theimage is smaller than the HTML element size. 
+    Sometimes it may look odd.
+     */
+
+    /* Repeat: default value */
+    background-repeat: repeat;
+    /* Repeat horizontally */
+    background-repeat: repeat-x;
+    /* Repeat vertically */
+    background-repeat: repeat-y;
+    /* No Repeat */
+    background-repeat: no-repeat;
+
+
+    /*--------------------- bg Position property ----------------------*/
+
+    /* background-position: value1 value2 ; */
+    background-position: right bottom;
+    background-position: right top;
+    background-position: left;
+
+
+    /*--------------------- bg Attachment property ----------------------*/
+    /* to fix Bg-image: 
+    values: scroll and fixed */
+    background-attachment: scroll;
+    background-attachment: fixed;
+
+
+    /*--------------------- Short Hand property ----------------------*/
+
+    background: gray url('bg.jpg') repeat-x top;
+    background: gray url('https://img.pikbest.com/wp/202344/blue-water-droplets-close-up-of-on-synthetic-waterproof-fabric-revealing-intricate-texture_9932907.jpg!f305cw') repeat-x top;
+    background: gray url('bg2.jpg') repeat-x top;
+
+
+
+
+    /*--------------------- bg size property ----------------------*/
+
+    /* value: auto (to fill box/div) */
+    background-size: auto;
+    /* value: contain (to expand) */
+    background-size: contain;
+    /* value: cover (to cover/fill whole page) */
+    background-size: cover;
+
+    /* background-size: horizontally vertically */
+    /* background-size: width height */
+    background-size: 500px 500px;
+    background-size: 500px;
+
+}

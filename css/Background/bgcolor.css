@@ -1,0 +1,17 @@
+/* Background Color: */
+
+/* syntax: property:value; */
+/* background-color: color name; */
+
+/* class selector */
+.bgcolor {
+    background-color: lightblue;
+    /* color: color names, color codes- Hex values, rgb values */
+    /* transparency of the background color can be adjusted using the 'opacity' property. */
+    opacity: 0.5;
+    /* value of opacity can vary from (0.0 - 1.0) */
+
+    background-color: yellowgreen;
+    opacity: 1.0;
+    /*default value*/
+}
