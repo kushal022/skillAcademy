@@ -1,0 +1,48 @@
+/* TEXT SHADOW */
+
+/* text-shadow: x-axis  y-axis  color(rgba) */
+h1.text_shadow1 {
+    text-shadow: 2rem 2rem rgba(138, 58, 236, 0.712);
+}
+
+/* multiple shadow */
+h1.text_shadow2 {
+    text-shadow: 2rem 2rem rgba(138, 58, 236, 0.5), 2rem -2rem rgba(138, 58, 236, 0.5);
+}
+
+h1.text_shadow3 {
+    text-shadow: 5px 4px rgba(138, 58, 236, 0.712);
+}
+
+/* blur effect: x-axis  y-axis  blur_value color(rgba) */
+h1.text_shadow4 {
+    text-shadow: 2rem 2rem 4px rgba(138, 58, 236, 0.712);
+}
+
+h1.text_shadow5 {
+    text-shadow: 5px 4px 4px rgba(138, 58, 236, 0.712);
+}
+
+h1.text_shadow6 {
+    text-shadow: 5px -4px 5px rgba(138, 58, 236, 0.712);
+
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 5rem;
+    border: 2px solid violet;
+    border-top: dotted;
+    border-bottom: solid;
+    border-left: none;
+    border-right: none;
+    /* short hand: border style: top right bottom left */
+    border-style: dotted none dashed none;
+    border-radius: 2rem 1rem 3rem 4rem;
+    border-radius: 2rem;
+    border-width: 0.3rem;
+    border-color: blueviolet;
+}
+
+h1.text_shadow7 {
+    text-shadow: 5px 4px 4px rgba(138, 58, 236, 1), 5px -4px 4px rgba(138, 58, 236, 1);
+    border-style: dashed dotted double solid;
+}

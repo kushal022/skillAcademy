@@ -4,6 +4,7 @@
 }
 
 
+/* ========================== Types ======================================= */
 
 /* Types of border */
 .border_1 {
@@ -42,6 +43,25 @@
     border: outset;
 }
 
+/* ========================== Short Hand======================================= */
+/* Short Hand */
+/* border-style: solid dotted dashed double */
+/* border style: top right bottom left */
+
+.short_hand_style {
+    text-align: center;
+    line-height: 4rem;
+    /* border style: top-bottom  left-right */
+    border-style: dotted solid;
+    /* border style: top right bottom left */
+    border-style: dotted solid dashed double;
+    border-style: dotted none dashed none;
+    border-radius: 2rem;
+    border-width: 5px;
+    border-color: blueviolet;
+}
+
+/* ============================ Thickness ===================================== */
 
 /* border_property */
 .border_property {
@@ -54,11 +74,15 @@
     border-width: 30px 20px;
     border-width: 5px 20px 30px 40px;
     border-right-width: 100px;
+    /* ======================== Color ========================================= */
 
     /* border color */
     border-color: blueviolet;
     border-top-color: aquamarine;
     border-color: yellowgreen violet teal chocolate;
+
+
+    /* ====================== Radious =========================================== */
 
     /* border radious: make cornor rounded */
     /* border-radius: 10px; */
@@ -71,9 +95,15 @@
     /* border-end-end-radius: 2px; */
     /* border-bottom-left-radius: 20px; */
 
+    /* SHORT HAND */
+    border-radius: 1rem 0.5rem;
+    border-radius: 1rem 0.5rem 2rem 3rem;
+
 
 }
 
+
+/* ========================== Table Border ======================================= */
 /* html table border */
 
 th,
