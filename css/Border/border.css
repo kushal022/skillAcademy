@@ -1,0 +1,97 @@
+.borders_div {
+    background-color: rgb(112, 205, 205);
+    padding: 2%;
+}
+
+
+
+/* Types of border */
+.border_1 {
+    border: none;
+}
+
+.border_2 {
+    border: dotted;
+}
+
+.border_3 {
+    border: dashed;
+}
+
+.border_4 {
+    border: solid;
+}
+
+.border_5 {
+    border: double;
+}
+
+.border_6 {
+    border: groove;
+}
+
+.border_7 {
+    border: ridge;
+}
+
+.border_8 {
+    border: inset;
+}
+
+.border_9 {
+    border: outset;
+}
+
+
+/* border_property */
+.border_property {
+    border: solid;
+    /* border thickness */
+    border-width: thin;
+    border-width: medium;
+    border-width: thick;
+    border-width: 5px;
+    border-width: 30px 20px;
+    border-width: 5px 20px 30px 40px;
+    border-right-width: 100px;
+
+    /* border color */
+    border-color: blueviolet;
+    border-top-color: aquamarine;
+    border-color: yellowgreen violet teal chocolate;
+
+    /* border radious: make cornor rounded */
+    /* border-radius: 10px; */
+    /* border-start-start-radius: 20px; */
+    /* border-end-end-radius: 20px; */
+    /* border-top-left-radius: 20px; */
+    /* border-top-right-radius: 20px; */
+    /* border-end-start-radius: 20px; */
+    border-bottom-right-radius: 20px;
+    /* border-end-end-radius: 2px; */
+    /* border-bottom-left-radius: 20px; */
+
+
+}
+
+/* html table border */
+
+th,
+td,
+table {
+    border: solid;
+    border-width: 2px;
+    border-color: blueviolet;
+    /*collapse: to marge double border */
+    /*separate: to unmarge double border */
+    border-collapse: collapse;
+    /* border-radius: 15px; */
+}
+
+th {
+    background-color: tomato;
+}
+
+td {
+    background-color: yellowgreen;
+}
