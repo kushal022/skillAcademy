@@ -1,0 +1,6 @@
+The box model includes:
+> dimentions: width & height of content.
+> borders: space between the content & border.
+> paddings: thickness, style of border surrounding the content & padding.
+> margins: space between the border of the element & outside edge/border of other element.
+

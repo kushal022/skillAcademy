@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+.heading {
+
+    background-color: rgb(173, 103, 238);
+    text-align: center;
+    padding: 0.3rem 0rem;
+
+}
+
+.profile {
+    width: 170px;
+    height: 200px;
+    padding: 6px;
+    background-color: rgb(182, 227, 78);
+    float: left;
+}
+
+.para1,
+.para2 {
+    text-indent: 3rem;
+    text-align: justify;
+    /* padding: 0.7rem 0.7rem 0rem 1rem; */
+    margin: 0.7rem 0.7rem 0rem 13rem;
+
+}
+
+
+
+.para3 {
+    text-indent: 3rem;
+    text-align: justify;
+    margin: 3rem 0.7rem 0rem 1rem;
+    /* float: left; */
+    clear: both;
+}

@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box_model {
+    background-color: blueviolet;
+    /* ============================= Width & Height ============================= */
+    width: 400px;
+    height: 100px;
+
+    /* ============================= Border ============================= */
+    border: solid 3px tomato;
+    border-radius: 1rem;
+
+    /* ============================= Padding ============================= */
+    /* All sides */
+    padding: 1rem;
+    /* Separataly */
+    padding-top: 3px;
+    padding-right: 1px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+
+    /* Short Hand of padding */
+    /* 4 values: top, right, bottom, left */
+    padding: 6px 11px 4px 91px;
+    /* 3 values: top, left & right, bottom */
+    padding: 5px 10px 10px;
+    /* 2 values: top & bottom, left & right */
+    padding: 2rem 5rem;
+
+    /* ============================= Margin ============================= */
+    /* All sides */
+    margin: 1rem;
+    /* separatoly */
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+    /* 4 values: top, right, bottom, left */
+    margin: 2rem 2rem 2rem 20rem;
+    /* 3 values: top, left & right, bottom */
+    margin: 2rem 12rem 2rem;
+    /* 2 values: top & bottom, left & right */
+    margin: 2rem 12rem;
+    /* 1 values: All side */
+    margin: 6rem;
+
+    /* ============================= Margin: Auto ============================= */
+    /* auto: allows to center content */
+    margin: auto;
+    /* top & bottom, auto : vertically adjustment & allows to center content */
+    margin: 03rem auto;
+
+}
+
+
+
+/* ============================= Minimum & Maximum, height & width ============================= */
+
+.para {
+    background-color: aquamarine;
+    margin: 1rem;
+    text-align: justify;
+    /* -------------------- Min & Max Width ------------------------ */
+    min-width: 2rem;
+    max-width: 60rem;
+    /* -------------------- Min & Max Height ------------------------ */
+    min-height: 2rem;
+    max-height: 5rem;
+    /* -------------------- Overflow ------------------------ */
+    overflow: visible;
+    overflow: hidden;
+    overflow: scroll;
+    overflow: auto;
+
+}
+
+
+
+/* ============================= Margin: Collapse ============================= */
+.elements {
+    /* display: grid; */
+    /* grid-column: auto; */
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+}
+
+.element1 {
+    background-color: blueviolet;
+    /* padding: 2rem; */
+    border: 2px solid;
+    /* margin: 2rem 2rem 4rem 2rem; */
+    /* float: left; */
+    /* margin: 1rem; */
+    margin-left: 1rem;
+
+}
+
+.element2 {
+    background-color: rgb(226, 43, 214);
+    /* padding: 2rem; */
+    border: 2px solid;
+    /* float: right; */
+    margin: 1rem;
+
+}
+
+.element3 {
+    background-color: rgba(43, 52, 226, 0.397);
+    /* padding: 2rem; */
+    border: 2px solid;
+    float: left;
+    /* margin: 1rem; */
+    margin-left: 1rem;
+    margin-top: 1rem;
+}

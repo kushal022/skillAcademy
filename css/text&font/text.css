@@ -70,6 +70,8 @@ p {
     /* spacing between words not letter (Word spacing property ) */
     word-spacing: 0.2rem;
 
+    white-space: nowrap;
+
 
     /* Certainly! The word-break property in CSS controls how words break when reaching the end of a line. */
     /* word-wrap: break-word; */

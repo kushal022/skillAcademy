@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Formatting</title>
+
+    <style>
+        h2,
+        p {
+            /* font family */
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            /* font style : normal, italic, oblique both are same*/
+            font-style: oblique;
+            font-style: italic;
+            font-style: normal;
+            /* font variant: small-caps, normal */
+            font-variant: small-caps;
+            font-variant: normal;
+            /* font-weight */
+            font-weight: bold;
+            font-weight: bolder;
+            font-weight: lighter;
+            font-weight: normal;
+            /* font-size */
+            font-size: small;
+            font-size: smaller;
+            font-size: x-small;
+            font-size: xx-small;
+            font-size: xx-large;
+            font-size: x-large;
+            font-size: larger;
+            font-size: large;
+            /* short-hand */
+            font: italic normal bold 15px georgia;
+
+
+
+
+        }
+
+        /* dont know how to use */
+        @font-face {
+            font-family: 'MyWebFont';
+            src: url('myfont.woff2') format('woff2'),
+                url('myfont.woff') format('woff');
+            font-display: fallback;
+            /* font-dispaly: */
+            font-display: auto;
+            font-display: block;
+            font-display: fallback;
+            font-display: optional;
+            font-display: swap;
+        }
+
+        p {
+            white-space: normal;
+            font-family: 'Courier New', Courier, monospace;
+            font-variant: small-caps;
+
+        }
+
+        div {
+
+            /* dont know how to use */
+            font-stretch: narrower;
+            font-kerning: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Font Formatting</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est debitis nemo placeat blanditiis porro? Autem
+        doloribus dolore ipsam! Vero esse tenetur quia asperiores illo? Alias commodi dicta delectus. Quas, harum.</p>
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum esse quam maiores architecto impedit! Earum
+        deserunt dicta corrupti blanditiis quidem debitis sint recusandae maxime enim, saepe consectetur voluptatum
+        nesciunt! Iusto!</div>
+</body>
+
+</html>
