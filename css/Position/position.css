@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    /* background-color: rgb(182, 214, 242); */
+}
+
+/* POSITION values
+    1. static
+    2. relative
+    3. absolute
+    4. fix
+    5. sticky
+    6. z-index */
+/* /////////////////////---------1. Static ---------- ////////////////////////////////////////// */
+
+/* 1. position: static; */
+.item1 {
+    background-color: rgb(0, 85, 255);
+    width: 100px;
+    height: 100px;
+    margin: 20px 0 0 20px;
+    /* position */
+    position: static;
+    /* static: its a default value and does not affect by the offset properties(top,right,bottom,left)*/
+    /* offset property */
+    /* top: 20px; */
+    /* left: 20px; */
+}
+
+/* /////////////////////---------2. Relative ---------- ////////////////////////////////////////// */
+
+/* 2. position: relative; */
+
+.item2 {
+    background-color: rgb(161, 54, 211);
+    width: 100px;
+    height: 100px;
+    margin: 20px 0 0 20px;
+    /* position */
+    /* position: relative; */
+    /* offset property */
+    /* top: 20px; */
+    /* left: 20px; */
+}
+
+.item2>div {
+    background-color: rgb(177, 116, 193);
+    width: 100px;
+    height: 100px;
+    /* relative */
+    position: relative;
+    top: 15px;
+    /* bottom: 15px; */
+    left: 15px;
+
+    /* z-index: -1; */
+}
+
+/* /////////////////////---------3. Absolute ---------- ////////////////////////////////////////// */
+
+/* 3. position: absolute; 
+a. direct (relative to page(body))
+b. relative to perent*/
+
+
+/* -------------------  absolute direct ---------------------------- */
+.item3 {
+    background-color: rgb(16, 185, 41);
+    width: 100px;
+    height: 100px;
+    margin: 20px 0 0 20px;
+    /* absolute */
+    /* position: absolute; */
+    /* top: 20px; */
+
+}
+
+.item3>div {
+    background-color: rgb(106, 219, 125);
+    width: 100px;
+    height: 100px;
+    /* absolute */
+    position: absolute;
+    top: 50px;
+    left: 180px;
+    /* z-index: -1; */
+}
+
+/* --------------------  absolute relative --------------------------- */
+.item4 {
+    background-color: rgb(202, 118, 8);
+    width: 100px;
+    height: 100px;
+    margin: 20px 0 0 20px;
+    /* absolute relative */
+    position: relative;
+    /* top: 20px; */
+
+}
+
+.item4>div {
+    background-color: rgb(209, 131, 83);
+    width: 100px;
+    height: 100px;
+    /* absolute relative*/
+    position: absolute;
+    top: -50px;
+    left: 80px;
+}
+
+/* /////////////////////---------4. fixed ---------- ////////////////////////////////////////// */
+
+/* its fixed */
+.item5 {
+    background-color: rgb(8, 137, 202);
+    width: 100px;
+    height: 100px;
+    margin: 20px 0 0 20px;
+    /* fixed */
+    position: fixed;
+    top: 20px;
+    left: 320px;
+    z-index: -1;
+
+
+}
+
+/* /////////////////////---------5. Sticky---------- ////////////////////////////////////////// */
+/* its fixed when we define */
+.item6 {
+    background-color: rgb(202, 8, 8);
+    width: 100px;
+    height: 100px;
+    margin: 20px 0 0 20px;
+    /* sticky */
+    position: sticky;
+    top: 100px;
+    left: 70px;
+    /* 1: upper item */
+    z-index: 1;
+
+}
+
+/* ///////////////////// 6. z-indez: -1; ////////////////////////////////////////// */
+/* under item or upper item  */
+.item7 {
+    background-color: rgb(255, 0, 204);
+    width: 100px;
+    height: 100px;
+    margin: 20px 0 0 20px;
+    /* sticky */
+    position: sticky;
+    top: 100px;
+    left: 300px;
+    /* z-index */
+    /* -1: under item */
+    z-index: -1;
+
+}
