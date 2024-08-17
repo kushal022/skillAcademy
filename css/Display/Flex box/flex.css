@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex Box */
+/* --> it a one-dimensional layout model, where flix meand flexible length on flexible items.
+   --> it's layout must have a parent element (container) with the display property
+       'flex'. so that the child elements of the container automatically become flex items. 
+   --> Flexbox provides an easy way to arrange items within a container
+   */
+
+/* //////////////////// Flex-Container //////////////////////////////////////// */
+/* parent container: felx container: 
+   -->  Property of parent element that is declared with display property flex*/
+.parent-container {
+    background-color: #ccc;
+    /* height for work align-items*/
+    height: 400px;
+    padding: 10px;
+    /* Flex in parent container */
+    /* ///////////////////////// Flex //////////////////////////////////////// */
+    /* Flex: 
+       Enables flex context to all direct child of the container.*/
+    /* by this all child items be in horizontally inline/row(default direction property) form*/
+    display: flex;
+
+    /* //////////////////// Flex-Direction //////////////////////////////////////// */
+    /* Flex Direction properties:
+       --> Specifies the direction of flex items in the main axis */
+    /* Row: row is default: main/x-axis,horizontally align) */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* Column: cross-axis/y-axis, Vertically align */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /* ///////////////////// Flex-Wrap //////////////////////////////////////// */
+    /* Flex wrap property:
+       --> Specifies whether the flex items should wrap or not when there is not enough space in a line */
+    /* nowrap: (default)  */
+    flex-wrap: nowrap;
+    /* wrap: (top to bottom) */
+    /* flex-wrap: wrap; */
+    /* wrap-reverse: (bottom to top) */
+    /* flex-wrap: wrap-reverse; */
+
+    /* ///////////////////// Flex-Flow //////////////////////////////////////// */
+    /* Flow: Shorthand property for 'flex-direction' and 'flex-wrap' */
+    /* flex-flow: row wrap-reverse; */
+
+    /* ///////////////////// Flex: Justify-content //////////////////////////////////////// */
+    /* justify-content: To align flex items on the "main axis" */
+    /* 
+    ● flex-start:--> default; align items left to right
+    ● flex-end:--> align items right to left
+    ● center:--> align items center
+    ● space-between:--> divides items in equal space between them
+    ● space-around:--> add equal around space in 1st & last items
+    ● space-evenly:-->all items have equal space including 1st & last items
+     */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* ///////////////////// Flex: Align-items //////////////////////////////////////// */
+    /* align-items:--> To align the flex items on the cross axis.
+    ● flex-start: align @start/default
+    ● flex-end: align @end/bottom all flex-items in flex-container.
+    ● center: align @center all flex-items in flex-container.
+    ● stretch
+    ● baseline
+    */
+    /* align-items: center; */
+    /* align-items: flex-end; */
+    /* align-items: flex-start; */
+    /* align-items: stretch; */
+    /* align-items: baseline; */
+
+
+    /* ///////////////////// Flex: Align-Content //////////////////////////////////////// */
+    /* align-content:property; 
+       --> To align the 'flex lines'. It will be effective only on 
+           multi-line flex containers where the flex-wrap property 
+           is either wrap or wrap-reverse. Similar to align-items 
+           but here the flex lines are aligned.
+        ● flex-start
+        ● flex-end
+        ● center
+        ● stretch
+        ● space-between
+        ● space-around
+    */
+    /* align-content: center; */
+    /* align-content: flex-end; */
+    /* align-content: flex-start; */
+    /* align-content: stretch; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+
+    /* ///////////////////// Flex: Gap //////////////////////////////////////// */
+    /* gap:
+       --> To control space between flex items.
+       row-gap:value;
+       column-gap:value;
+       gap:Row-gap-value column-gap-value;
+    */
+    /* gap: 200px 200px; */
+    /* column-gap: 100px; */
+    /* row-gap: 100px; */
+
+    /* ///////////////////// Flex: Order  //////////////////////////////////////// */
+    /* order: value;
+       ● Value must be a number. Default value is 0.
+       ● Specifies the order of flex items
+    */
+
+    /* ///////////////////// Flex: Grow  //////////////////////////////////////// */
+    /* flex-grow: value;
+       ● To increase any flex-item.
+       ● Value must be a number. Default value is 0.
+       ● To make the flex item grow with respect to given value.
+    */
+    /* flex-grow: 400px; */
+
+    /* ///////////////////// Flex: Shrink  //////////////////////////////////////// */
+    /* flex-shrink: value;
+       ● To decrease any flex-item.
+       ● Value must be a number. Default value is 1. If the value is given as 0, it won’t let the flex item shrink.
+       ● To make the flex item shrink with respect to given value.
+    */
+    /* flex-shrink: 1px; */
+
+    /* ///////////////////// Flex: Basis  //////////////////////////////////////// */
+    /* flex-basis: value;
+       ● increase or decrease Length/width (px, %, rem, etc...)
+       ● The value will be assigned as the default size of the 
+         flex item and the remaining space will be distributed.
+    */
+    /* flex-basis: 20px; */
+
+    /* ///////////////////// Flex: Short-hand  //////////////////////////////////////// */
+    /* flex: flex-grow flex-shrink flex-basis;
+       --> Shorthand property for flex-grow, flex-shrink, flex-basis.
+       --> flex: "0 8 0px";
+    */
+
+    /* ///////////////////// Flex: Self Align  //////////////////////////////////////// */
+    /* align-self: ;
+     --> Specifies the alignment for selected flex items inside the container.
+     ● flex-start
+     ● flex-end
+     ● center
+     ● baseline
+     ● stretch
+    */
+    /* align-self: center; */
+
+}
+
+
+/* ///////////////////// Flex-Item //////////////////////////////////////// */
+/* child containers: flex item
+   --> Properties of child elements. There may be one or many flex items*/
+.child-item {
+    background-color: black;
+    color: #ffff;
+    margin: 10px;
+    padding: 5px;
+    /*--> Flexbox aligns and distributes space among the items 
+          in the container even when the size of the items is 
+          unknown or dynamic*/
+    width: 50px;
+    height: 50px;
+}

@@ -26,8 +26,9 @@ p {
 }
 
 /* css: attribute selector  */
-input[type='radio']{
-    transform: scale(0.8); /* size of radio*/
+input[type='radio'] {
+    transform: scale(0.8);
+    /* size of radio*/
     /* display: inline-block; */
     /* align-items: center; */
     /* justify-content: center; */
@@ -58,6 +59,5 @@ button {
     border: outset;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    
-}
 
+}
