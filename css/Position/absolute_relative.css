@@ -1,0 +1,277 @@
+.parent {
+    position: relative;
+    background-color: yellow;
+    width: 300px;
+    height: 300px;
+}
+
+.box-1 {
+    position: relative;
+    /* top: 40px; */
+    /* left: 50px; */
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: red;
+    /* width: 80px; */
+    /* height: 80px; */
+}
+
+.box-2 {
+    position: absolute;
+    /* top: 40px; */
+    /* left: 50px; */
+    bottom: 40px;
+    right: 50px;
+    background-color: green;
+    /* width: 80px; */
+    /* height: 80px; */
+}
+
+.box-3 {
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: blue;
+    /* width: 80px; */
+    /* height: 80px; */
+}
+
+.box-4 {
+    position: absolute;
+    /* top: 0px; */
+    /* left: 70px; */
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: rgb(255, 0, 200);
+    /* width: 80px; */
+    /* height: 80px; */
+}
+
+.box-5 {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: rgb(13, 179, 143);
+    /* width: 80px; */
+    /* height: 80px; */
+}
+
+/* //////////////////////////////////////////////////// */
+
+.parent2 {
+    position: relative;
+    /* background-color: rgb(196, 155, 234); */
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    width: 300px;
+    height: 300px;
+    border: solid 3px black;
+    border-right: none;
+    border-radius: 1px 1px 1px 1px;
+}
+
+
+.parent2>div {
+    border: solid 2px black;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #e64040a3, #5851db59, #833ab485, #c13584, #e1306c, #fd1d1d70);
+}
+
+
+
+.item1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: red;
+    width: 80px;
+    height: 80px;
+}
+
+.item2 {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: green;
+    width: 80px;
+    height: 80px;
+}
+
+.item3 {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: blue;
+    width: 80px;
+    height: 80px;
+}
+
+.item4 {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: palevioletred;
+    width: 80px;
+    height: 80px;
+}
+
+.item5 {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: orange;
+    width: 80px;
+    height: 80px;
+}
+
+.item6 {
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: orangered;
+    width: 80px;
+    height: 80px;
+}
+
+.item7 {
+    position: absolute;
+    top: 140px;
+    left: 140px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: orchid;
+    width: 80px;
+    height: 80px;
+}
+
+.item8 {
+    position: absolute;
+    top: 160px;
+    left: 160px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: olivedrab;
+    width: 80px;
+    height: 80px;
+}
+
+.item9 {
+    position: absolute;
+    top: 180px;
+    left: 180px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: brown;
+    width: 80px;
+    height: 80px;
+}
+
+.item10 {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    /* bottom: 40px; */
+    /* right: 50px; */
+    background-color: chocolate;
+    width: 80px;
+    height: 80px;
+}
+
+/* ///////////////////////////////////// */
+.bigparent {
+    position: relative;
+}
+
+.parent3 {
+    position: absolute;
+    bottom: 0px;
+    left: 300px;
+    /* background-color: rgb(196, 155, 234); */
+    background: linear-gradient(318deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    width: 300px;
+    height: 300px;
+    border: solid 3px black;
+    border-left: 0px;
+    border-radius: 1px 1px 1px 1px;
+}
+
+.parent3>div {
+    border: solid 2px black;
+    border-radius: 10px;
+    background: linear-gradient(302deg, #e64040a3, #5851db59, #833ab485, #c13584, #e1306c, #fd1d1d70);
+}
+
+.parent3>.item1 {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+}
+
+.parent3>.item2 {
+    position: absolute;
+    top: 180px;
+    left: 40px;
+}
+
+.parent3>.item3 {
+    position: absolute;
+    top: 160px;
+    left: 60px;
+}
+
+.parent3>.item4 {
+    position: absolute;
+    top: 140px;
+    left: 80px;
+}
+
+.parent3>.item5 {
+    position: absolute;
+    top: 120px;
+    left: 100px;
+}
+
+.parent3>.item6 {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+}
+
+.parent3>.item7 {
+    position: absolute;
+    top: 80px;
+    left: 140px;
+}
+
+.parent3>.item8 {
+    position: absolute;
+    top: 60px;
+    left: 160px;
+}
+
+.parent3>.item9 {
+    position: absolute;
+    top: 40px;
+    left: 180px;
+}
+
+.parent3>.item10 {
+    position: absolute;
+    top: 20px;
+    left: 200px;
+}
