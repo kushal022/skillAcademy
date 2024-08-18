@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emogi model</title>
+    <!-- <link rel="stylesheet" href="boxmodel.css"> -->
+    <style>
+        * {
+            margin: 0;
+        }
+
+        /* position */
+        /* face */
+        .parent {
+            position: relative;
+            background-color: yellow;
+            width: 300px;
+            height: 300px;
+            margin: 30px;
+            border: double 10px;
+            border-radius: 50%;
+
+        }
+
+        /* eye-1 */
+        .box-1 {
+            position: absolute;
+            top: 85px;
+            left: 46px;
+            background-color: rgb(6, 6, 6);
+            width: 80px;
+            height: 80px;
+            border: solid 3px;
+            border-radius: 50%;
+            /* padding: 10px; */
+
+
+        }
+
+        /* eye-2 */
+        .box-2 {
+            position: absolute;
+            top: 85px;
+            /* bottom: 20px; */
+            right: 46px;
+            /* left: 0px; */
+            background-color: rgb(0, 0, 0);
+            width: 80px;
+            height: 80px;
+            border: solid 3px;
+            border-radius: 50%;
+
+        }
+
+        /* mouth */
+        .box-3 {
+            position: absolute;
+            bottom: 30px;
+            right: 77px;
+            background-color: rgba(26, 101, 144, 0);
+            width: 145px;
+            height: 80px;
+            border-bottom: solid 22px;
+            border-radius: 52%;
+
+        }
+
+        /* 
+        .teeth-1 {
+            position: absolute;
+            top: 78px;
+            left: 46px;
+            background-color: rgb(250, 251, 252);
+            width: 21px;
+            height: 18px;
+            border-bottom: solid 31px;
+            border-radius: 0px 35px 189px 189px;
+
+        }
+        
+        .teeth-2 {
+            position: absolute;
+            top: 78px;
+            left: 78px;
+            background-color: rgb(255, 255, 255);
+            width: 21px;
+            height: 18px;
+            border-bottom: solid 31px;
+            border-radius: 0px 35px 189px 189px;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <h2>Emogi Model</h2> -->
+    <div class="parent">
+        <div class="box-1"></div>
+        <div class="box-2"></div>
+        <div class="box-3">
+            <div class="teeth-1"></div>
+            <div class="teeth-2"></div>
+        </div>
+    </div>
+</body>
+
+</html>
