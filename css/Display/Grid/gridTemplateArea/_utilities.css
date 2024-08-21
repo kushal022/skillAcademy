@@ -1,0 +1,23 @@
+/* create variables for css */
+:root {
+    /* syntax 
+    --variableName: value*/
+    --bgColor: rgb(40, 39, 39);
+    --textColor: #ffff;
+    --gridFont: sans-sarif;
+}
+
+/* set default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* use variable by 'var(variableName)' function */
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    font-family: var(--gridFont);
+    text-align: center;
+}
