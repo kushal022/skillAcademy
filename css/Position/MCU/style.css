@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+}
+
+body {
+    /* background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.8),
+            rgba(255, 0, 0, 0.8),
+            rgba(255, 255, 0, 0.8));
+    background-image: url(mavel_bg.png); */
+
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.8),
+            rgba(255, 0, 0, 0.8)),
+        url('mavel_bg.png') no-repeat center center / cover;
+    height: 100vh;
+    margin: 0;
+
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 3.5rem;
+    letter-spacing: 0px;
+    color: #ffffffce;
+    text-shadow: 9px 5px 15px #f11000, -4px 5px 15px #f11000, 0px -6px 15px #f11000;
+}
+
+.parent {
+    position: relative;
+}
+
+h2 {
+    position: absolute;
+    top: 365px;
+    left: 42%;
+    z-index: 9;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #ffff;
+    background-color: #f11000;
+    padding: 5px 4px 2px 4px;
+    box-shadow: 0px -7px 50px rgb(231 220 220);
+    opacity: 0.7;
+
+
+}
+
+.parent>div {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    border: solid 3px rgb(11, 4, 4);
+    background-color: aqua;
+    background-size: cover;
+    box-shadow: 0px 26px 56px red;
+    opacity: 0.9;
+}
+
+.char-1 {
+    top: 20px;
+    left: 13.11%;
+    background-image: url(thor.jpg);
+
+
+}
+
+.char-2 {
+    top: 40px;
+    left: 21.11%;
+    background-image: url(Bwidow.jpg);
+
+}
+
+.char-3 {
+    top: 60px;
+    left: 29.11%;
+    background-image: url(wanda.jpg);
+
+}
+
+.char-4 {
+    top: 80px;
+    left: 37.11%;
+    background-image: url(hulk2.jpg);
+
+}
+
+.char-5 {
+    top: 100px;
+    left: 45.11%;
+    z-index: 4;
+    background-image: url(ironman2.jpg);
+
+}
+
+.char-6 {
+    top: 80px;
+    left: 53.11%;
+    z-index: 3;
+    background-image: url(steev.jpg);
+
+}
+
+.char-7 {
+    top: 60px;
+    left: 61.11%;
+    z-index: 2;
+    background-image: url(hokai.webp);
+
+}
+
+.char-8 {
+    top: 40px;
+    left: 69.11%;
+    z-index: 1;
+    background-image: url(spidy.jpg);
+
+}
+
+.char-9 {
+    top: 20px;
+    left: 77.11%;
+    background-image: url(sam.jpg);
+}
