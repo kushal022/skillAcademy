@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <link rel="stylesheet" href="./_utilities.css">
+    <link rel="stylesheet" href="./combinators.css">
+</head>
+
+<body>
+    <h1>Combinators in Css: Space, >, +, ~, ',' </h1>
+    <!-- Descendant combinator -->
+    <h2>Descendant combinator: Space</h2>
+    <div class="parent">
+        <div class="child">Descendant combinator: Space</div>
+        <div class="child">Descendant combinator: Space</div>
+        <div class="friend">Descendant combinator: Space</div>
+        <div class="child">Descendant combinator: Space</div>
+        <div class="child">Descendant combinator: Space</div>
+    </div>
+
+    <h2>Child combinator: ></h2>
+    <div class="parent2">
+        <div class="child"> child</div>
+        <div class="child">
+            <div class="grandchild"> grandchild</div>
+        </div>
+        <div class="child">child</div>
+        <div class="child">child</div>
+    </div>
+
+    <h2>General sibling combinator: ~ </h2>
+    <p>The Tilda symbol (~) is what tells us this is a sibling combinator.</p>
+    <div class="parent3">
+        <div class="brother">brother</div>
+        <div class="sister">sister</div>
+        <div class="sister">sister</div>
+        <div class="sister">sister</div>
+    </div>
+
+    <h2>Adjacent combinator: + </h2>
+    <p>What makes an adjacent combinator different is that it selects any element immediately following another.</p>
+    <div class="parent4">
+        <div class="brother1">brother</div>
+        <div class="sister1">sister</div>
+        <div class="sister1">sister</div>
+        <div class="sister1">sister</div>
+    </div>
+</body>
+
+</html>

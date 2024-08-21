@@ -1,0 +1,37 @@
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Descendant combinator: space \\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.parent .child {
+    color: red;
+}
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Child combinator: > \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.parent2>.child {
+    color: blue;
+}
+
+.parent2>div {
+    color: yellowgreen;
+}
+
+.parent2>* {
+    color: yellow;
+}
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ General sibling combinator: ~ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/* The Tilda symbol (~) is what tells us this is a sibling combinator. */
+/* It doesn’t matter if a .sister comes immediately after a .brother or not — as long as 
+a .sister comes after a brother and they share the same parent element, it will be selected. */
+.brother~.sister {
+    color: teal;
+}
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Adjacent combinator: + \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/* What makes an adjacent combinator different is that it selects any element immediately following another. */
+
+
+
+.brother1+.sister1 {
+
+    color: rgb(234, 10, 10);
+}

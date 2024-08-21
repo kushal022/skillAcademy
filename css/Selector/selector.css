@@ -1,0 +1,111 @@
+/* Selectors:
+    1. Element Selectors 
+        element-->	p-->	Selects all <p> elements
+    2. ID Selector:
+        #id:-->	#firstname-->	Selects the element with id="firstname"
+    3. Class Selector:
+        .class:-->	.intro-->	Selects all elements with class="intro"
+    4. Element.Class Selector:
+        element.class-->	p.intro-->	Selects only <p> elements with class="intro"
+    5. Universal Selector:
+        *-->	*-->	Selects all elements
+    6. Group Selector:
+        element,element,..-->	div, p-->	Selects all <div> elements and all <p> elements
+
+    7.Pseudo Class Selector:
+        element:pseudo_class {
+            property: value;
+        }
+
+    8. Attribute Selector:
+        element [attribute="attribute_value"] {
+            property: value;
+        }
+
+
+
+
+    more Selectors in combinators:
+    space, >, +, ~    
+    
+    
+    
+    */
+
+/* //////////////////////////// 1. Element/Type Selectors /////////////////////////////// */
+/* element select: css style apply on all the selected html elements. 
+    like; h1-h6,p,div,section,a,span,article etc.....*/
+h1 {
+    color: red;
+}
+
+/* //////////////////////////// 2. Id Selectors /////////////////////////////// */
+/* The id selector uses the id attribute of an HTML element to select a specific element. 
+    The id of an element is unique within a page, so the id selector is used to select one unique element!
+    # use to select id selector*/
+#para {
+    color: blue;
+}
+
+/* //////////////////////////// 3. Class Selectors /////////////////////////////// */
+/* The class selector selects HTML elements with a specific class attribute.
+   To select elements with a specific class, write a period (.) character, followed by the class name.  */
+
+.article {
+    color: green;
+}
+
+/* //////////////////////////// 3. Element.Class Selectors /////////////////////////////// */
+
+
+/* You can also specify that only specific HTML elements should be affected by a class. */
+article .para {
+    color: blueviolet;
+}
+
+/* HTML elements can also refer to more than one class. */
+
+
+/* //////////////////////////// 4. Universal Selectors /////////////////////////////// */
+/* The universal selector (*) selects all HTML elements on the page. */
+
+* {
+    align-items: center;
+}
+
+/* Select everything in an <article> */
+article * {
+    /* Styles */
+    font-size: 2rem;
+}
+
+
+/* //////////////////////////// 5.Grouping Selector /////////////////////////////// */
+/* The grouping selector selects all the HTML elements with the same style definitions. */
+h2,
+h3,
+h5,
+h6,
+footer {
+    color: chocolate;
+}
+
+/* //////////////////////////// 6. Attribute Selector /////////////////////////////// */
+
+/* 
+element [attribute="attribute_value"] {
+    property: value;
+}
+*/
+p[type="attributepara"] {
+    color: violet;
+}
+
+
+/* //////////////////////////// 7. Pseudo Selector /////////////////////////////// */
+
+/* 
+element:pseudo_class {
+    property: value;
+}
+*/
