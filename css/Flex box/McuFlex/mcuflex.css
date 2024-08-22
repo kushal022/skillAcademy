@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(30, 28, 28);
+    /* background-image: linear-gradient(to right, rgb(171, 120, 120), rgb(160, 87, 87), rgb(160, 71, 71), rgb(194, 58, 58)); */
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0px;
+
+}
+
+.item {
+    /* background-color: rgb(98, 94, 94); */
+    background-size: cover;
+    width: 100px;
+    height: 120px;
+    border: solid 2px rgba(219, 29, 29, 0.588);
+    border-radius: 2rem;
+    margin-top: 0px;
+    margin-left: -30px;
+    opacity: 0.0;
+    box-shadow: 1px 1px 60px 0px red;
+
+}
+
+
+.item:first-child {
+    margin-left: 0px;
+}
+
+
+
+div:hover {
+    opacity: 1;
+    cursor: pointer;
+    color: red;
+    z-index: 2;
+}
+
+.item1 {
+    background-image: url(Bwidow.jpg);
+}
+
+.item2 {
+    background-image: url(cap.webp);
+}
+
+.item3 {
+    background-image: url(dpool.png);
+}
+
+.item4 {
+    background-image: url(hokai.webp);
+}
+
+.item5 {
+    background-image: url(hulk.webp);
+}
+
+.item6 {
+    background-image: url(hulk2.jpg);
+}
+
+.item7 {
+    background-image: url(ironman.png);
+}
+
+.item8 {
+    background-image: url(ironman2.jpg);
+}
+
+.item9 {
+    background-image: url(sam.jpg);
+}
+
+.item10 {
+    background-image: url(spidy.jpg);
+}
+
+.item11 {
+    background-image: url(steev.jpg);
+}
+
+.item12 {
+    background-image: url(thanos.jpg);
+}
+
+.item13 {
+    background-image: url(thor.jpg);
+}
+
+.item14 {
+    /* margin-left: 10px; */
+    background-image: url(wanda.jpg);
+}
+
+.item15 {
+    background-image: url(Bwidow.jpg);
+}
+
+.item16 {
+    background-image: url(cap.webp);
+}
+
+.item17 {
+    background-image: url(cap.webp);
+}
+
+.item18 {
+    background-image: url(dpool.png);
+}
+
+.item19 {
+    background-image: url(hokai.webp);
+}
+
+.item20 {
+    background-image: url(hulk.webp);
+}
+
+.item21 {
+    background-image: url(hulk2.jpg);
+}
+
+.item22 {
+    background-image: url(ironman.png);
+}
+
+.item23 {
+    background-image: url(ironman2.jpg);
+}
+
+.item24 {
+    background-image: url(sam.jpg);
+}
+
+.item25 {
+    background-image: url(spidy.jpg);
+}
+
+.item26 {
+    background-image: url(wanda.jpg);
+}
+
+.item27 {
+    /* margin-left: 10px; */
+    background-image: url(thor.jpg);
+}
+
+.item28 {
+    background-image: url(thanos.jpg);
+}
+
+.item29 {
+    background-image: url(steev.jpg);
+}
+
+.item30 {
+    background-image: url(spidy.jpg);
+}
+
+.item31 {
+    background-image: url(Bwidow.jpg);
+}
+
+.item32 {
+    background-image: url(cap.webp);
+}
+
+.item33 {
+    background-image: url(dpool.png);
+}
+
+.item34 {
+    background-image: url(hokai.webp);
+}
+
+.item34 {
+    background-image: url(hulk.webp);
+}
+
+.item35 {
+    background-image: url(Bwidow.jpg);
+}
+
+.item36 {
+    background-image: url(thor.jpg);
+}
+
+.item37 {
+    background-image: url(thanos.jpg);
+}
+
+.item38 {
+    background-image: url(hulk2.jpg);
+}
+
+.item39 {
+    background-image: url(ironman2.jpg);
+}
+
+.item40 {
+    /* margin-left: 10px; */
+    background-image: url(spidy.jpg);
+}
+
+.item41 {
+    background-image: url(hokai.webp);
+}
+
+.item42 {
+    background-image: url(Bwidow.jpg);
+}
+
+.item43 {
+    background-image: url(ironman2.jpg);
+}
+
+.item44 {
+    background-image: url(wanda.jpg);
+}
+
+.item45 {
+    background-image: url(thor.jpg);
+}
+
+.item46 {
+    background-image: url(Bwidow.jpg);
+}
+
+.item47 {
+    background-image: url(thanos.jpg);
+}
+
+.item48 {
+    background-image: url(ironman2.jpg);
+}
+
+.item49 {
+    background-image: url(Bwidow.jpg);
+}
+
+.item50 {
+    background-image: url(steev.jpg);
+}
+
+.item51 {
+    background-image: url(wanda.jpg);
+}
+
+.item52 {
+    background-image: url(hulk2.jpg);
+}
+
+.item53 {
+    background-image: url(hokai.webp);
+}
+
+.item54 {
+    background-image: url(Bwidow.jpg);
+}
+
+.item55 {
+    background-image: url(Bwidow.jpg);
+}
