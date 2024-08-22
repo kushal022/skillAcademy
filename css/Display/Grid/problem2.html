@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-model: border-box; */
+        }
+
+        .container {
+            height: 100vh;
+            background-color: darkgray;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-auto-rows: 100px;
+            grid-gap: 10px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .grid-item {
+            padding: 20px 15px;
+            background-color: rgb(50, 49, 49);
+            border-radius: 0.5rem;
+            /* align-content: center; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item1 {
+            grid-column: 1/3;
+            grid-row: 1;
+        }
+
+        /* Important */
+        .grid-item2 {
+            /* grid-row-start: 1; */
+            /* grid-row-end: 3; */
+            /* grid-column-start: 3; */
+            /* grid-column-end: 3; */
+            /* grid-area: 1/3/3/3; */
+            grid-column: 3;
+            grid-row: 1/3;
+        }
+
+        .grid-item3 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .grid-item4 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        h2,
+        p {
+            background-color: #595656;
+            color: #fff;
+            padding: 5px 20px;
+        }
+
+        hr {
+            padding: 2px;
+            background-color: #313030;
+            border: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Problem 2: Spanning Tracks</h2>
+    <p>To creat Grid Areas that are larger tha a single grid track we specify an end
+        line that is more than one track away, using grid-column and grid-row shorthand.
+    </p>
+    <hr>
+
+    <section class="container">
+        <div class="grid-item grid-item1">A</div>
+        <div class="grid-item grid-item2">B</div>
+        <div class="grid-item grid-item3">C</div>
+        <div class="grid-item grid-item4">D</div>
+        <!-- <div class="grid-item grid-item5">E</div> -->
+        <!-- <div class="grid-item grid-item6">F</div> -->
+    </section>
+</body>
+
+</html>

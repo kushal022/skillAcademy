@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-model: border-box; */
+        }
+
+        .container {
+            height: 100vh;
+            background-color: darkgray;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-auto-rows: 100px;
+            grid-gap: 10px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .grid-item {
+            padding: 20px 15px;
+            background-color: rgb(50, 49, 49);
+            border-radius: 0.5rem;
+            /* align-content: center; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2,
+        p {
+            background-color: #595656;
+            color: #fff;
+            padding: 5px 20px;
+        }
+
+        hr {
+            padding: 2px;
+            background-color: #313030;
+            border: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Problem 1: Grid Definition</h2>
+    <p>Design the following output by using display: grid,grid-colum-template, grid-gap
+        background-color, color, and box-model properties.
+    </p>
+    <hr>
+
+    <section class="container">
+        <div class="grid-item grid-item1">A</div>
+        <div class="grid-item grid-item2">B</div>
+        <div class="grid-item grid-item3">C</div>
+        <div class="grid-item grid-item4">D</div>
+        <div class="grid-item grid-item5">E</div>
+        <div class="grid-item grid-item6">F</div>
+    </section>
+</body>
+
+</html>
