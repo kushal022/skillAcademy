@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --shadowBox: 2px 2px 20px 1px rgb(200, 192, 192);
+    --shadowText: 2px 2px 7px rgb(242, 234, 234);
+}
+
+body {
+    background-color: darkgray;
+    font-family: sans-serif;
+
+}
+
+.calendar {
+    margin: 2rem auto;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    width: 50vw;
+    /* height: 50vh; */
+    border: solid 3px rgb(102, 101, 101);
+    background-color: rgb(163, 157, 157);
+
+}
+
+.month-year>h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: rgb(91, 90, 90);
+    text-shadow: var(--shadowText);
+}
+
+.day-names-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: rgb(191, 188, 188);
+    justify-items: center;
+    padding: 10px;
+    box-shadow: var(--shadowBox);
+    color: rgb(53, 52, 52);
+    transition: 0.3s;
+
+}
+
+.day-names-container>.day {
+    list-style-type: none;
+}
+
+.date {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-evenly;
+    grid-gap: 5px;
+    border: solid 2px rgb(174, 168, 168);
+    border-top-style: none;
+    padding-bottom: 20px;
+    box-shadow: var(--shadowBox);
+    color: rgb(53, 52, 52);
+
+
+
+}
+
+.date>.count {
+    list-style-type: none;
+    justify-self: center;
+    margin-top: 30px;
+    padding: 10px;
+    text-shadow: var(--shadowText);
+    box-shadow: var(--shadowBox);
+    transition: 0.3s;
+
+}
+
+
+.first-count {
+    grid-column-start: 3;
+}
+
+.date>.count:hover {
+    color: rgb(235, 232, 238);
+    font-size: 10000;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(133, 129, 129);
+    border-radius: 50%;
+    box-shadow: var(--shadowText);
+}
+
+.day-names-container:hover {
+    cursor: pointer;
+    margin-left: -8px;
+    margin-right: -8px;
+    border-radius: 5px;
+}
