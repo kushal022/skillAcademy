@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skew Property</title>
+    <style>
+        /*
+        skew: 
+        The skew property in CSS allows you to skew an element along the X and Y axes, 
+        creating a slanted or distorted effect. This property is part of the 
+        CSS Transforms module.
+        */
+        .parent {
+            background-color: lightcyan;
+            border: solid 2px black;
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+
+        .child {
+            width: 80px;
+            height: 80px;
+            border: solid 2px black;
+            background-color: brown;
+            position: absolute;
+            /* top: 140px;
+            left: 50px; */
+            transition: 2s;
+        }
+
+        .child1 {
+            width: 80px;
+            height: 80px;
+            border: solid 2px black;
+            background-color: brown;
+            position: absolute;
+            top: 140px;
+            left: 50px;
+        }
+
+        .child2 {
+            width: 80px;
+            height: 80px;
+            border: solid 2px black;
+            background-color: brown;
+            position: absolute;
+            top: 140px;
+            left: 150px;
+        }
+
+        .child3 {
+            width: 80px;
+            height: 80px;
+            border: solid 2px black;
+            background-color: brown;
+            position: absolute;
+            top: 140px;
+            left: 250px;
+        }
+
+        .child:hover {
+            /* skew: 260deg; */
+            /* transform: skewX(45deg); */
+            /* transform: skewY(360deg); */
+            /* transform: skew(360deg); */
+            /* transform: skew(20deg, 20deg); */
+            transform: skewX(-20deg);
+            transform: skewX(30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rotate Property</h1>
+    <div class="parent">
+        <div class="child child1"> Skew1</div>
+        <div class="child child2"> Skew2</div>
+        <div class="child child3"> Skew3</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+/* Animation Property: */
+
+.model {
+    background-color: red;
+    /* padding: 30px; */
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    transition: all 0.9s;
+    animation-name: myModel;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    /* short hand */
+    /* animation: myModel 5s ease-in-out 1s infinite alternate forwards running; */
+}
+
+
+
+@keyframes myModel {
+    from {
+        /* left: 200px; */
+        /* scale: 0.2; */
+        /* translate: 0.2; */
+    }
+
+    to {
+        /* scale: 1.2; */
+        /* translate: 1; */
+
+        /* left: 900px; */
+    }
+
+
+
+
+    0% {
+        top: 0px;
+        left: 0px;
+        /* scale: 0.2; */
+
+    }
+
+    25% {
+        top: 400px;
+        left: 700px;
+        scale: 0.2;
+
+    }
+
+    50% {
+        top: 400px;
+        left: 0px;
+        scale: 0.2;
+
+    }
+
+    75% {
+        top: 0px;
+        left: 700px;
+        /* scale: 1; */
+
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+    }
+
+
+}

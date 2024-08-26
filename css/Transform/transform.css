@@ -1,0 +1,59 @@
+.parent {
+    background-color: lightcyan;
+    border: solid 2px black;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    perspective: 200px;
+}
+
+.child {
+    width: 80px;
+    height: 80px;
+    border: solid 2px black;
+    background-color: brown;
+    position: absolute;
+    /* top: 140px;
+    left: 50px; */
+    transition: 2s;
+}
+
+.child1 {
+    width: 80px;
+    height: 80px;
+    border: solid 2px black;
+    background-color: brown;
+    position: absolute;
+    top: 140px;
+    left: 50px;
+}
+
+.child2 {
+    width: 80px;
+    height: 80px;
+    border: solid 2px black;
+    background-color: brown;
+    position: absolute;
+    top: 140px;
+    left: 150px;
+}
+
+.child3 {
+    width: 80px;
+    height: 80px;
+    border: solid 2px black;
+    background-color: brown;
+    position: absolute;
+    top: 140px;
+    left: 250px;
+}
+
+.child:hover {
+    /* transform: scale(1.5) skew(20deg); */
+
+    /* transform: rotate(45deg) translate(24px, 25px); */
+    /* same result of matrix */
+    /* transform: matrix(0.7071067811865475, 0.7071067811865476, -0.7071067811865476, 0.7071067811865475, -0.7071067811865497, 34.648232278140824); */
+
+    transform: translateZ(20px)
+}

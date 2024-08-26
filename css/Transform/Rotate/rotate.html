@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate Property</title>
+    <style>
+        /* 
+        rotate: 
+        The rotate property in CSS allows you to rotate an element around a 
+        fixed point on the 2D plane. This property is part of the CSS Transforms 
+        module and can be used to create various visual effects. 
+        
+        angle: 
+        The amount of rotation, specified in degrees (deg), radians (rad), 
+        gradians (grad), or turns (turn). Positive values rotate the element 
+        clockwise, while negative values rotate it counterclockwise.
+        */
+        .parent {
+            background-color: lightcyan;
+            border: solid 2px black;
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+
+        .child {
+            width: 80px;
+            height: 80px;
+            border: solid 2px black;
+            background-color: brown;
+            position: absolute;
+            top: 140px;
+            left: 140px;
+            transition: 10s;
+        }
+
+        .child:hover {
+            /* rotate: angle; */
+            /* rotate: 260deg; */
+
+            /* clockwise */
+            /* transform: rotate(360deg); */
+
+            /* anticlockwise */
+            /* transform: rotate(-360deg); */
+
+            /* vertically/y-axis */
+            /* transform: rotateY(360deg); */
+
+            /* Horizontally/X-axis */
+            /* transform: rotateX(360deg); */
+
+            /* units */
+            /* transform: rotate(360deg); */
+            /* transform: rotate(2turn); */
+            /* transform: rotate(360grad); */
+            transform: rotate(360rad);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rotate Property</h1>
+    <div class="parent">
+        <div class="child"> Rotate</div>
+    </div>
+</body>
+
+</html>
