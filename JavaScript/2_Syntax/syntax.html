@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Syntax</title>
+</head>
+
+<body>
+    <h1>JavaScript variables & types</h1>
+    <div id="first"></div>
+    <div id="second"></div>
+
+    <script type="text/JavaScript">
+
+        // var fruit;   //undefined
+        var fruit = "Mango";  // Global variable
+        var price = 100;
+        document.getElementById('first').innerHTML = fruit;
+        document.getElementById('second').innerHTML = price;
+
+
+        //multiline literals
+        console.log("this is my 1st line \nthis is my 2nd line \nthis is my 3rd line")
+//using backtick
+        console.log(`this is my 1st line 
+this is my 2nd line 
+this is my 3rd line`)
+
+        console.log(`My fav is fruit ${fruit} and price is ${price}.`)
+</script>
+</body>
+
+</html>

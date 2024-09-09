@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+
+<body>
+    <h2>Operators</h2>
+    <script>
+        document.write("This is java script operators:")
+        document.write("<br>")
+
+        document.write("+,-,/,*,**,%,++,--")
+        document.write("<br>")
+
+        // document.writeln("heklo")
+        // document.write("hello")
+        //--------------------------------------------
+        //Addition:
+        console.log(4 + 3)  // 7    // here 4 & 3 are 'Operands'
+        //substraction
+        console.log(4 - 3)  // 1
+        //multiplication
+        console.log(4 * 3)  // 12
+        //division
+        console.log(4 / 2)  // 2
+        //exponential
+        console.log(4 ** 2)  // 16
+        //modulas / remainder
+        console.log(9 % 2)  // 1
+
+        //INcrement: only work with 'Variable';
+        //post increament
+        // console.log(9++)  // Erorr: it doesn't work as now, it always work with 'Variable'.
+        x = 4;
+        x++
+        // x = x + 1
+        console.log(x) //   5
+        //> x = 4
+        //<.4
+        //> x++    post increament    
+        //<. 4      
+        //> x
+        //<. 5
+
+        //pre increament
+        y = 4;
+        ++y;
+        console.log(y)  // 5
+        //> y = 4
+        //<.4
+        //> ++y    pre increament    
+        //<. 5      
+
+        //Decreament ; only work with 'Variable';
+        // post decreament
+        x = 4;
+        x--;
+        console.log(x)  // 3
+        //> x = 4
+        //<.4
+        //> x--    post decreament    
+        //<. 4      
+        //> x
+        //<. 3
+
+        // pre decreament
+        y = 4;
+        --y;
+        console.log(y)  // 3
+        //> y = 4
+        //<.4
+        //> --y    pre decreament
+        //<. 3      
+        //-------------------------------------------------------------------------
+        document.write('Comparison / Relational operators')
+        document.write("<br>")
+        // it perform conparison b/w two operands, & boolean value will be returned as a result of this operation.
+        // return; true and false
+
+        // 1. Is equal to (==)
+        console.log(10 == 10)  // true
+        console.log(10 == "10")  // true
+
+        // 2. Identical (equal & of same type; compare data type also) (===)
+        //     must have same data types
+        console.log(10 === "10")  // false
+        console.log(10 === 10)  // true
+        console.log(10 === 10.0)  // true
+        console.log(10 === 10.1)  // false
+        // 3. Not equal to ( != )
+        console.log(10 != 10.0)  // false
+        console.log(10 != 10.1)  // true
+        console.log(10 != 11)  // true
+        console.log(10 != "10")  // false  ; ignoer data types
+
+        // 4. Not identical ( !== )
+        console.log(10 !== "10")  // true  ; not ignor data types
+        console.log(10 !== 10)  // false
+
+        // 5. Greater than ( > )
+        console.log(10 > 12)  // false
+        console.log(15 > 12)  // ture
+
+        // 6. Greater than or qual to  ( >= )
+        console.log(15 >= 12)  // ture
+        console.log(15 >= 15)  // ture
+        console.log(15 >= 18)  // false
+
+        // 7. Less than ( < )
+        console.log(10 < 15)  // ture
+        console.log(15 < 12)  // false
+
+        // 8. Less than or qual to  ( <= )
+        console.log(15 <= 12)  // false
+        console.log(15 <= 15)  // true
+        console.log(15 <= 18)  // true
+
+
+        //-------------------------------------------------------------------------
+        document.write('Bitwise Operator')
+        document.write("<br>")
+        // perform bitwise operation on operands. 
+        // 1. Bitwise AND  ( & )
+        // 2. Bitwise OR    ( | )
+        // 3. Bitwise XOR ( ^ )
+        // 4. Bitwise NOT ( ~ )
+        // 5. Bitwise Left Shift    ( << )
+        // 6. Bitwise Right Shift   ( >> )
+        // 7. Bitwise Right Shift with Zero ( <<< ) 
+
+        //-------------------------------------------------------------------------
+        document.write('Logical Operator')
+        document.write("<br>")
+        // perform logical operations on the operands.
+        // 1. Logical AND ( && )
+        console.log(true && true)   // true
+        console.log(true && false)   // false
+        console.log(false && true)   // false
+        console.log(false && true)   // false
+        console.log(false && false)   // false
+        console.log(5 > 3 && 3 > 2)   // true
+        // 2. Logical OR ( || )
+        console.log(true || true)   // true
+        console.log(true || false)   // true
+        console.log(false || true)   // true
+        console.log(false || true)   // true
+        console.log(false || false)   // false
+        console.log(5 > 3 || 3 > 2)   // true
+        // 3. Logical NOT ( ! )
+        x = true || false;
+        console.log(x) // true
+        console.log(!x) // false
+
+        //-------------------------------------------------------------------------
+        document.write('Assignment Operator/ shorthand assignment operator')
+        document.write("<br>")
+        // assign values to the javascript variables;
+        // 1. Assign ( = )
+        i = 10;
+        // 2. Add and Assign ( += )
+        i = i + 5 // 15
+        // or
+        i += 5 // 15
+        // 3. Subtract and Assign ( -= )
+        i = i - 5 // 5
+        // or
+        i -= 5 // 5
+        // 4. Multiply and Assign ( *= )
+        i = i * 5 // 50
+        // or
+        i *= 5 // 50
+        // 5. Divide and Assign ( /= )
+        i = i / 5 // 2
+        // or
+        i /= 5 // 2
+        // 6. Modulas and Assign ( %= )
+        i = i % 3 // 1
+        // or
+        i %= 3 // 1
+
+
+        //-------------------------------------------------------------------------
+        document.write('Miscellaneous Operator')
+        document.write("<br>")
+        document.write('1. Conditional or Ternary Operator ( ? )')
+        document.write("<br>")
+        // 1. Conditional or Ternary Operator:
+        // Conditional operator returns value based on the ocndition. It is similar to an if-else statement.
+        // syntax: 
+        // ( condition ) ? value-1 : value-2   
+        // retuen: vlue-1 if condition true
+        // retuen: vlue-2 if condition false
+
+        let result = (5 > 4) ? "5 is greater than 4" : 'try again!!';
+        console.log(result) // 5 is greater than 4
+
+        let result2 = (5 < 4) ? "5 is greater than 4" : 'try again!!';
+        console.log(result2) // try again!!
+
+        var str = "hello";
+        var str2 = 8;
+        var result3 = (typeof str == "string" ? "str is string" : "str is numeric");
+        var result4 = (typeof str2 == "string" ? "str is string" : "str is numeric");
+        console.log(result3)  // str is string
+        console.log(result4)  // str is numeric
+        // document.write("<br>")
+        // document.write(result3)
+        // document.write("<br>")
+        // document.write(result4)
+        // document.write("<br>")
+
+        //-------------------------------------------------------------------------
+        document.write('2. TypeOf Operator')
+        document.write("<br>")
+        //2. TypeOf Operator:
+        // typeOf operator is a Unary Operator i.e it uses a single operand.
+        // this operator evaluates the data type of the operand.
+        // 1. Number
+        console.log(typeof (9)) // 'number'
+        console.log(typeof (4.55)) // 'number'
+        // 2. String
+        console.log(typeof ("9")) // 'string'
+        console.log(typeof ("kushal")) // 'string'
+        // 3. Boolean
+        console.log(typeof (true)) // 'boolean'
+        console.log(typeof (4 < 5)) // 'boolean'
+        // 4. Undefined
+        console.log(typeof (undefined)) // 'undefined'
+        let b;
+        console.log(typeof (b)) // 'undefined'
+        // 5. Null
+        console.log(typeof (null)) // 'object'
+        // 6. Object
+        let m = { a: 4, b: 'kushal' }
+        console.log(typeof (m)) // 'object'
+
+        //-------------------------------------------------------------------------
+        document.write('3. String Operator')
+        document.write("<br>")
+        // String Operator
+        // ( + ) Operator is used to "concatenate" strings
+
+        let text1 = "Kushal";
+        let text2 = "Jangid";
+        let text3 = text1 + " " + text2;
+        let text4 = text1 + text2;
+        console.log(text3) // Kushal Jangid
+        console.log(text4) // KushalJangid
+
+        console.log(5 + 5)    // 10
+        console.log(5 + "5")    // 55
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
