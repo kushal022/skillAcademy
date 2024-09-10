@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditions</title>
+</head>
+
+<body>
+    <h3>JavaScript Conditions</h3>
+    <script>
+        document.write('JavaScript Conditions')
+        document.write('<br>')
+        // conditional statements control  the behavior of the javascript.
+        // 1. if
+        // 'if' statements is used when a specific block of code to be executed, if a condition is true.
+        //syntax:
+        // fi ( condition ) {
+        //      block of code
+        // }
+
+        var num = 10;
+        if (num % 2 == 0) {
+            console.log("if block is executed ")
+            console.log(num + " is a even number")
+        }// condition is true; so bloc is executed
+
+        // 2. if...else
+        // 'else' statements is used when a specific block of code to be executed, if a condition is false.
+        var num = 11;
+        if (num % 2 == 0) {
+            console.log("if block is executed ")
+            console.log(num + " is a even number")
+
+        } else {
+            console.log('else bolck is executed, when conditon false')
+            console.log(num + " is a odd number")
+        }
+        // condition is flse; so else bloc is executed
+
+        // 3. if...else...if
+        // if the 'else if' condition is true then the cone inside the 'else if' block will be executed.
+        var num = 11;
+        if (num % 2 == 0) {
+            console.log("if block is executed ")
+            console.log(num + " is a even number")
+
+        } else if (num % 2 !== 0) {
+            console.log('else..if bolck is executed, when conditon false')
+            console.log(num + " is a odd number")
+        } else {
+            console.log('else block')
+        }
+        // 4. switch case
+        // To perform different actions based on different conditions we use switch satements.
+        // syntax:
+        // switch (expression ) {
+        //     case x:
+        // code block
+        //break;
+        //case y:
+        // code block
+        // break;
+        //default:
+        //code block
+        // }
+
+        var num = 20;
+        switch (num) {
+            case 10:
+                console.log("number is :" + num);
+                break;
+            case 20:
+                console.log("number is :" + num);
+                break;
+            case 30:
+                console.log("number is :" + num);
+                break;
+            case 40:
+                console.log("number is :" + num);
+                break;
+            case 50:
+                console.log("number is :" + num);
+                break;
+            default:
+                console.log("This is default block");
+
+        }
+
+        // Example 1: Basic Usage
+        let day = new Date().getDay();
+        let dayName;
+
+        switch (day) {
+            case 0:
+                dayName = "Sunday";
+                break;
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            default:
+                dayName = "Invalid day";
+        }
+
+        console.log(dayName); // Output will be the current day of the week
+
+        // Example 2: Traffic Light System
+        let trafficLight = "green";
+        let message;
+
+        switch (trafficLight) {
+            case "red":
+                message = "Stop immediately.";
+                break;
+            case "yellow":
+                message = "Prepare to stop.";
+                break;
+            case "green":
+                message = "Proceed or continue driving.";
+                break;
+            default:
+                message = "Invalid traffic light color.";
+        }
+
+        console.log(message); // Output: Proceed or continue driving.
+
+        // Example 3: Calculator
+        let operator = "*";
+        let result;
+        let num1 = 5;
+        let num2 = 3;
+
+        switch (operator) {
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "*":
+                result = num1 * num2;
+                break;
+            case "/":
+                result = num1 / num2;
+                break;
+            default:
+                result = "Invalid operator";
+        }
+
+        console.log(result); // Output: 15
+
+        // Example 4: Grading System
+        let grade = 'B';
+        let feedback;
+
+        switch (grade) {
+            case 'A':
+                feedback = "Excellent!";
+                break;
+            case 'B':
+                feedback = "Good job!";
+                break;
+            case 'C':
+                feedback = "Well done!";
+                break;
+            case 'D':
+                feedback = "You passed.";
+                break;
+            case 'F':
+                feedback = "Better luck next time.";
+                break;
+            default:
+                feedback = "Invalid grade.";
+        }
+
+        console.log(feedback); // Output: Good job!
+
+
+        // Example 5: Fruit Prices
+        let fruit = 'Apple';
+        let price;
+
+        switch (fruit) {
+            case 'Banana':
+                price = 1.0;
+                break;
+            case 'Apple':
+                price = 1.5;
+                break;
+            case 'Orange':
+                price = 2.0;
+                break;
+            case 'Mango':
+                price = 2.5;
+                break;
+            default:
+                price = "Unknown fruit";
+        }
+
+        console.log(`The price of ${fruit} is $${price}.`); // Output: The price of Apple is $1.5.
+
+        // Example 7: Seasons
+        let month = 4; // April
+        let season;
+
+        switch (month) {
+            case 12:
+            case 1:
+            case 2:
+                season = "Winter";
+                break;
+            case 3:
+            case 4:
+            case 5:
+                season = "Spring";
+                break;
+            case 6:
+            case 7:
+            case 8:
+                season = "Summer";
+                break;
+            case 9:
+            case 10:
+            case 11:
+                season = "Autumn";
+                break;
+            default:
+                season = "Invalid month";
+        }
+
+        console.log(`Month: ${month}, Season: ${season}`); // Output: Month: 4, Season: Spring
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
