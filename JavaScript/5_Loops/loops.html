@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+    <h3>JavaScript Loops</h3>
+    <script>
+        // Loops can executed a block of code anu number of times.
+        // Loops helps to run the same code any number of thimes with different values each time.
+
+        // 1. Entery Controlled Loop:
+        // the condition is tested before the entry of the loop body. ( for_loop and while_loop)
+        // 2. Exit Controlled Loop:
+        // The Condition is tested at the end of the loop body.In this case the loop will be executed at least once
+        // irrespective of the condition. ( Do_while_loop )
+
+        // Types of loops:
+        // 1. for
+        // 2. for_in
+        // 3. for_of
+        // 6. for_each
+        // 4. while
+        // 5. Do_while
+
+        // for loop:
+        // it is used when the number of iterations is known.
+        // syntax;
+
+        // for ( initialization ; condition ; increment/decrement ) {
+        // code to be executed
+        //}
+
+        // initialization: initialize the variable in use.
+        // condition: Exit condition is tested here. it returns a boolean value.
+        //// condition is checked prior to the execution of the loop statement.
+        // code: if condition is true, then the loop statement is executed.
+        // Increment/Decrement: Update values for next iteration.
+
+        for (var init = 0; init < 20; ++init) {
+            console.log(init)  // 0 to 19 ; same result of both pre increment (++init) , Post increment ( init++ );
+            document.write(init)
+            document.write('<br>')
+        }
+
+        // two values
+        // for (var i = 0, j = 10; i < 10, j > 0; ++i, j--) {
+        for (i = 0, j = 10; i < 10; ++i, j--) {
+            console.log(i, j)
+        }
+
+        // For_in loop:
+        // The for_in loop is used to iterate through an object's keys;
+        // it can not be use for Arrays
+        // syntax:
+        // for ( variable_name in object ){
+        // block to execute;
+        //}
+
+        var marks = {
+            Name: "Hemant",
+            Subject: 'English',
+            Marks: 20,
+        }
+
+        console.log(marks.Name) // Hemant
+        console.log(marks[0]) // undefined
+
+
+        for (key in marks) {
+            // console.log(marks[key])
+            console.log(key, ':', marks[key])
+        }
+
+        // For_of loop:
+        // it's used to iterate over the values of the iterable object such as
+        // Array, String, Maps, NodeList etc.
+        // cann't use on objects.
+        // use on array of object.
+        // to execute on the value of each property of the object the For Of Loop calls a custom iteration hook.
+        // syntax:
+        // for ( variable of iterable ){
+        // code block
+        //}
+
+        var arr = [5, 35, 22, 62, 621, 23, 57, 3];
+        //acess
+        console.log(arr[4])
+
+        for (i of arr) {
+            console.log(i)
+        }
+
+        // While Loop:
+
+
+        // syntax:
+        // (initialize);
+        // while ( condition ){
+        // block of code
+        //(increment/decrement)
+        // }
+
+        var str = "";
+        var i = 0;
+        while (i < 5) {
+            str += "<br> The number is " + i;
+            i++
+        }
+        document.write("While loop")
+        document.write(str)
+        console.log(str)
+
+
+        // take input and add
+        var sum = 0;
+        var input = 0;
+        while (input != 'x') {
+            // sum = sum + input;
+            // sum = sum + parseInt(input);
+            sum = sum + Number(input);
+            // input = prompt("Enter number to add or x to exit");
+
+        }
+        console.log("total is " + sum);
+
+        // Do_while loop:
+        // Exit controlled loop;i.e condition is at the end of the loop.
+        // Executes the loop statement before checking the condition.
+
+        //syntax:
+        // do {
+        // code block;
+        //} while ( condition );
+
+
+        // var str = "";
+        // var i = 0;
+        // do {
+        //     str += "<br> The number is " + i;
+        //     i++;
+        // } while (i < 5);
+        // document.write(str)
+        // console.log(str)
+    </script>
+</body>
+
+</html>
