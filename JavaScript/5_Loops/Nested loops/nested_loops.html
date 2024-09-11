@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Loops</title>
+</head>
+
+<body>
+    <h3>Nested Loops</h3>
+    <script>
+        // Nested Loops:
+        // a nested for loop is when a loop runs inside another loop.
+
+        // oputerloop {
+        // innerLoop {
+        // statements to execute inside inner loop
+        //}
+
+        // statements to execute inside outer loop
+
+        //}
+
+        // the inner loop will run all its iterations for each iteration of the outer loop.
+        //
+
+        // Outerloop
+        // for (var i = 1; i < 5 ; i++) {
+        //     console.log("This is inside i = " + i)
+        //     // Innerloop
+        //     for (var j = 1; j < 5 ; j++) {
+        //         console.log("i = " + i + "   j = " + j)
+        //     }
+        // }
+        // // Outerloop
+        // for (var i = 1; i <= 5; i++) {
+        //     console.log("This is inside i = " + i)
+        //     // Innerloop
+        //     for (var j = 1; j <= i; j++) {
+        //         console.log("i = " + i + "   j = " + j)
+        //     }
+        // }
+
+        // patteren 1;
+        /*
+        1
+        12
+        123
+        1234
+        12345
+        */
+        // here Rows = OuterLoop and columns = InnerLoop;
+
+        for (var i = 1; i <= 5; i++) {
+            var line = '';
+            for (var j = 1; j <= i; j++) {
+
+                line = line + j;
+                // line = line + i;
+
+            }
+            console.log(line)
+            document.write("<br>", line)
+        }
+
+        // patteren 2;
+        /*
+        1
+        22
+        333
+        4444
+        55555
+        */
+        // for (var i = 1; i <= 5; i++) {
+        //     var line = '';
+        //     for (var j = 1; j <= i; j++) {
+
+        //         // line = line + j;
+        //         line = line + i;
+
+        //     }
+        //     console.log(line)
+        //     document.write("<br>", line)
+        // }
+
+
+        // patteren 3;
+        /*
+        1 to 5 Table;
+        1 x 1 = 1
+        1 x 2 = 2
+        1 x 3 = 3
+        .........
+        5 x 10 = 50
+
+        */
+        document.write("<br>")
+
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= 10; j++) {
+
+                document.write("<br>", i + ' x ' + j + " = " + i * j)
+                console.log(i + ' x ' + j + " = " + i * j)
+            }
+            document.write("<br>")
+            console.log("")
+        }
+
+
+    </script>
+</body>
+
+</html>
