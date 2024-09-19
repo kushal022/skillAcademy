@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            background-image: url(Designer\ \(1\).jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* color: white; */
+            backdrop-filter: blur(1px);
+            font-family: sans-serif;
+            color: rgba(14, 28, 34, 0.959);
+
+
+        }
+
+        :root {
+            --gredient3: linear-gradient(90deg,
+                    rgb(127, 187, 207),
+                    rgb(67, 67, 217),
+                    rgb(127, 187, 207),
+                );
+            --gredient: linear-gradient(90deg, rgb(127, 187, 207),
+                    rgba(67, 67, 217, 0.83),
+                    /* rgb(67, 67, 217), */
+                    /* rgb(67, 67, 217), */
+                    /* rgb(127, 187, 207), */
+                    rgb(127, 187, 207),
+                    rgb(127, 187, 207));
+            --shadow1: 0px 0px 40px 15px rgba(1, 1, 1, 0.975);
+            --shadow2: 0px 0px 75px 2px rgb(7 109 154 / 88%);
+        }
+
+        .time-date {
+            margin: 200px auto;
+            /* background-color: rgba(19, 70, 87, 0.288); */
+            background-image: linear-gradient(90deg, rgba(173, 216, 230, 0.222), rgba(18, 79, 247, 0.318), rgba(173, 216, 230, 0.354));
+            background-size: 300%;
+            background-position: left;
+            width: 700px;
+            height: 200px;
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            box-shadow: var(--shadow1);
+        }
+
+        .clock {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .clock>div {
+            width: 200px;
+            margin: 5px 5px;
+            display: grid;
+        }
+
+        .clock span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-image: var(--gredient);
+            background-position: left;
+            background-size: 300%;
+            border-radius: 10px;
+            box-shadow: var(--shadow2);
+        }
+
+        #ampm {
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-radius: 10px;
+            background-image: var(--gredient);
+            box-shadow: var(--shadow2);
+            background-position: left;
+            background-size: 300%;
+        }
+
+        .time {
+            font-size: 4rem;
+            font-weight: 700;
+            box-shadow: var(--shadow2);
+            z-index: 3;
+            opacity: 0.8;
+            color: rgba(21, 34, 39, 0.727);
+        }
+
+        .time-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+        .time,
+        .time-text,
+        .date,
+        .time-date,
+        #ampm {
+            animation-name: gredient_ani;
+            animation-duration: 20s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes gredient_ani {
+            0% {
+                background-position: left;
+            }
+
+            100% {
+                background-position: right;
+            }
+        }
+
+        /* date */
+        .date {
+            background-image: var(--gredient);
+            background-position: left;
+            background-size: 300%;
+            height: 45px;
+            margin: 8px 170px;
+            display: grid;
+            grid-template-columns: 100px 40px 120px 60px;
+            justify-content: center;
+            align-content: center;
+            border-radius: 10px;
+            box-shadow: var(--shadow1);
+            opacity: 0.8;
+        }
+
+        .date p {
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            align-self: stretch;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="time-date">
+        <div class="clock">
+            <div>
+                <span class="time" id="hours">4</span>
+                <span class="time-text">Hours</span>
+            </div>
+            <div>
+                <span class="time" id="minutes">44</span>
+                <span class="time-text">Minutes</span>
+            </div>
+            <div>
+                <span class="time" id="seconds">33</span>
+                <span class="time-text">Seconds</span>
+            </div>
+            <div class="time-text" id="ampm">AM</div>
+        </div>
+        <div class="date">
+            <p id="day">Day</p>
+            <p id="date">Date</p>
+            <p id="month">Month</p>
+            <p id="year">Year</p>
+        </div>
+    </div>
+
+    <script>
+        const hours = document.getElementById("hours")
+        const minutes = document.getElementById("minutes")
+        const seconds = document.getElementById("seconds")
+        const ampm = document.getElementById("ampm")
+        const today = document.getElementById("day")
+        const todayDate = document.getElementById("date")
+        const thisMonth = document.getElementById("month")
+        const thisYear = document.getElementById("year")
+
+        function timeAndDate() {
+            /////////////// Time:
+            let hr = new Date().getHours(); // 24 hrs time
+            let min = String(new Date().getMinutes()).padStart(2, '0');
+            let sec = String(new Date().getSeconds()).padStart(2, '0');
+            minutes.innerText = min;
+            seconds.innerText = sec;
+            // 24hrs to 12hrs
+            hr_12 = (hr % 12 == 0) ? 12 : hr % 12;    // 12hrs
+            hours.innerText = String(hr_12).padStart(2, '0'); // 01,02,03......12
+            // AM or PM
+            ampm.innerText = (hr < 12 || hr == 24) ? "AM" : "PM";
+
+            //////////////Date:
+            //ToDay
+            const daysName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const dayIndex = new Date().getDay(); // returns day index
+            const day = daysName[dayIndex] // now returns day name (like-sunday....)
+            today.innerText = day + ",";
+            //Today Date
+            todayDate.innerText = String(new Date().getDate()).padStart(2, '0');
+            // ThisMonth
+            const monthsName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+            const monthIndex = new Date().getMonth()
+            const month = monthsName[monthIndex];
+            thisMonth.innerText = month;
+            //This Year
+            const year = new Date().getFullYear();
+            thisYear.innerText = year;
+        }
+        setInterval(timeAndDate, 1000); // to set interval for evey call
+        timeAndDate();
+    </script>
+
+</body>
+
+</html>

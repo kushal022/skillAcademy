@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p1</title>
+    <style>
+        body {
+            background-color: lightblue;
+
+        }
+
+        section {
+            position: relative;
+            background-color: lightblue;
+            /* rotate: -15deg; */
+            /* margin-top: 160px; */
+            /* padding: 50px 50px; */
+
+        }
+
+        .div2 {
+            position: absolute;
+            top: 2px;
+            z-index: 58;
+
+        }
+
+        .thar {
+            width: 300px;
+            margin-top: 0rem;
+        }
+
+        .tyre1 {
+            width: 66px;
+            position: absolute;
+            bottom: 6px;
+            left: 36px;
+
+        }
+
+        .tyre2 {
+            width: 66px;
+            position: absolute;
+            bottom: 6px;
+            left: 217px;
+            /* transform: rotate(360deg); */
+            /* transition: 1s; */
+
+        }
+
+        .tyre1,
+        .tyre2 {
+            animation-name: tyre_rotate;
+            animation-duration: 5s;
+            animation-delay: 0ms;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            /* animation-direction: reverse; */
+        }
+
+        div {
+            position: relative;
+            /* rotate: -10deg; */
+            animation-name: thar_move;
+            animation-duration: 15s;
+            animation-fill-mode: forwards;
+            /* animation-iteration-count: infinite; */
+            animation-direction: initial;
+
+        }
+
+        section::after {
+            content: "";
+            background-color: rgb(95, 95, 95);
+            opacity: 0.8;
+            /* background: linear-gradient(to right, #4a4a4a 0%, #4a4a4a 45%, #ffffff 45%, #ffffff 55%, #4a4a4a 55%, #4a4a4a 100%); */
+            padding: 100px;
+            position: absolute;
+            width: 150%;
+            top: 300px;
+            left: -10px;
+            z-index: -2;
+            /* margin-left: -100px; */
+            /* padding-left: -100px; */
+            height: 5px;
+        }
+
+
+
+        @keyframes tyre_rotate {
+
+            from {
+                transform: rotate(-4600deg);
+            }
+
+            to {
+                transform: rotate(100deg);
+
+            }
+
+
+
+        }
+
+        @keyframes thar_mov {
+            0% {
+                left: 0px;
+                scale: 0.8;
+            }
+
+            50% {
+                /* right: 0px; */
+                left: 1200px;
+                scale: 1.0;
+            }
+
+            100% {
+                /* left: 0px; */
+                /* scale: 0.8; */
+                left: 1000px;
+                scale: 1.0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Practice 1:</h4>
+    <section>
+        <marquee behavior="scroll" scrollamount="55px" direction="right">
+            <div class="div1">
+                <img src="thar.png" alt="" class="thar">
+                <img src="tyre.png" alt="" class="tyre1">
+                <img src="tyre.png" alt="" class="tyre2">
+            </div>
+        </marquee>
+        <marquee behavior="scroll" vspace="200px" scrollamount="40px" direction="right">
+            <div class="div2">
+                <img src="thar.png" alt="" class="thar">
+                <img src="tyre.png" alt="" class="tyre1">
+                <img src="tyre.png" alt="" class="tyre2">
+            </div>
+        </marquee>
+        <div>
+            <img src="thar.png" alt="" class="thar">
+            <img src="tyre.png" alt="" class="tyre1">
+            <img src="tyre.png" alt="" class="tyre2">
+        </div>
+    </section>
+</body>
+
+</html>

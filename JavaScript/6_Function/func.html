@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions JS</title>
+</head>
+
+<body>
+    <h3>JavaScript Functions</h3>
+    <div id="element"></div>
+    <button id="button1">Click on me</button>
+    <script>
+        //Functions
+        console.log("-------------------------------------------")
+        // Syntax:
+        function function_name(parameter_1, parameter_2) {
+            // code to be executed
+            return parameter_1 + parameter_2;  // return: return final value
+        }
+        // function invokation or call
+        // function_name(argument_1,argument_2);
+        // store in variable
+        let variable = function_name(4, 5);
+        console.log(variable) // output: 9
+
+        console.log("-------------------------------------------")
+        // Without paramete functions
+        function sayHello() {
+            console.log("Hello befor return") // exected
+            return "Hello return"  // function execution stope after "return"
+            console.log("After return") // this will not execute
+        }
+
+        // function invoking/calling
+        let greet = sayHello()
+        console.log(greet)
+        // console.log(sayHello())
+
+        // without () it returns whole function decleration
+        // but in onclick attribute  of button work different, see later!
+        let greet2 = sayHello
+        console.log(greet2)
+
+        console.log("-------------------------------------------")
+
+        function demo() {
+            console.log("demo function")
+            return "How are you function?"
+        }
+
+        let element = document.getElementById("element");
+        element.innerText = demo()
+
+        console.log("-------------------------------------------")
+
+        // onclick property for button:
+        let button1 = document.getElementById("button1")
+        function button_function() {
+            button1.innerText = "I was clicked sir!!"
+            button1.style.backgroundColor = "lightblue"
+            element.style.backgroundColor = "gold"
+            console.log("Button clicked")
+        }
+
+        // call function when button click
+        // button1.onclick = button_function()
+        button1.onclick = button_function
+
+        console.log("-------------------------------------------")
+        //Variables in functions:
+        let x = 4;
+        function demo1() {
+            let x = 2;
+            var y = 2;
+            console.log("local variable1: " + x)
+            console.log("local variable2: " + y)
+        }
+
+        demo1()
+        console.log("Global variable: " + x) // error: here cann't access x
+        // console.log("Global variable: " + y) 
+        // error: here cann't access y, 
+
+
+    </script>
+</body>
+
+</html>

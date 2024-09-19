@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        body {
+            background-color: rgb(41, 39, 39);
+        }
+
+        .container {
+            background-color: rgba(240, 248, 255, 0.106);
+            height: 500px;
+            width: 500px;
+            margin: 10rem auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .sun {
+            background-color: goldenrod;
+            box-shadow: 1px 1px 39px 2px #cece6ac9;
+            /* padding: 5rem; */
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .earth {
+            background-color: rgb(137, 222, 137);
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            box-shadow: 1px 1px 50px 0px #dbdbbfa4;
+            position: absolute;
+            top: 215px;
+            left: 215px;
+
+            animation-name: moveEarth;
+            animation-duration: 5s;
+            animation-delay: 0ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            z-index: 5;
+
+        }
+
+        .earth::before {
+            content: "";
+            /* padding: 100px; */
+            background-color: rgba(240, 248, 255, 0.347);
+            /* border-left: 2px solid red; */
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            left: 0px;
+            /* top: -2px; */
+            bottom: 0px;
+            /* border-radius: 50%; */
+        }
+
+        /* .earth:hover {
+            transform: rotate(360deg) translateX(50px) rotate(360deg);
+            transition: 5s;
+        } */
+
+        @keyframes moveEarth {
+            from {
+                transform: rotate(0deg) translateX(200px) rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg) translateX(200px) rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+
+</html>

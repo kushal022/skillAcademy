@@ -1,0 +1,41 @@
+
+        // let h = new Date()
+        // console.log(h)
+
+        // const date = new Date();
+        // console.log(date)
+        // console.log(date.getFullYear()); // Outputs the year
+        // console.log(date.getMonth());    // Outputs the month (0-11)
+        // console.log(date.getDate());     // Outputs the day of the month (1-31)
+        // console.log(date.getHours());    // Outputs the hour (0-23)
+        // console.log(date.getMinutes());  // Outputs the minutes (0-59)
+        // console.log(date.getSeconds());  // Outputs the seconds (0-59)
+        // console.log(date.getFullYear()); // Year
+        // console.log(date.getMonth());    // Month (0-11)
+        // console.log(date.getDate());     // Day of the month (1-31)
+        // console.log(date.getDay().toString());      // Day of the week (0-6)
+
+        // const date = new Date();
+        // const options = {
+        //     weekday: 'long',
+        //     // month: "numeric",
+        //     month: "long"
+        // };
+        // // const options = { month: 'long' };
+        // const dayName = date.toLocaleDateString('en-US', options);
+
+        // console.log(dayName); // Outputs the name of the current day
+
+        // const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        // const date = new Date().getDay();
+        // const dayName = days[date];
+
+        // console.log(dayName); // Outputs the name of the current day
+
+        // const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        // const date = new Date().getMonth();    //
+        // const monthName = months[date];
+
+        // console.log(monthName); // Outputs the name of the current month
+
+
