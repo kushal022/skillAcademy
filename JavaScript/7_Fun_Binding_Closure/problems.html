@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems: bind_this_closure</title>
+</head>
+
+<body>
+    <h3>Problems: bind(), this, closure</h3>
+    <div id="element"></div>
+    <script>
+        /*//Problem Statement 1: Function borrowing;
+        ---------------------------------------------------
+        With the bind() method,create two objects and make an object 
+        borrow a method from anotherobject.
+        */
+        //sol.
+        const person = {
+            firstName: "Hemant",
+            lastName: "Jangid",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        const member = {
+            firstName: "Chetan",
+            lastName: "Sharma",
+        }
+
+        let borrowMethodByBind = person.fullName.bind(member)
+        console.log(borrowMethodByBind()) // Chetan Sharma
+
+
+
+
+
+        /*//Problem Statement 2:'this' in method;
+        ---------------------------------------------
+        When used in an object method,'this' refers to the object. 
+        Create an object, where you have multiple properties and values, 
+        and define a function as one value. With help of 'this' keyword access the 
+        values of properties in that function. Invoke the function to display the 
+        data from the object.
+        */
+        const person2 = {
+            firstName: "Hemant",
+            lastName: "Jangid",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        let man = person2.fullName();
+        console.log(man) // Hemant Jangid
+
+
+        /*
+        Problem Statement 3: 'this' as global object;
+        ------------------------------------------------------
+        When used alone,this refers to the global object.In a browser window the global 
+        object is [object Window], Display the global object in a browser window by 
+        assigning this as a value of a variable and print the variable
+        */
+
+        // let car = "Alto 800";  //undefined
+        var car = "Alto 800";   //it's in global/window object
+        console.log(this.car)  // Aloto 800;
+
+        let x = this;
+        console.log(x)
+
+
+        /*
+        Problem Statement 4: this in function (Default)
+        -------------------------------------------------
+        In a function, the global object is the default binding for 'this'. 
+        Create a function that returns 'this'. And invoke the function to see what 
+        gets printed in the output window.
+        */
+
+        function windowObj() {
+            return this;
+        }
+        console.log(windowObj())
+
+        document.getElementById("element").innerText = windowObj()
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

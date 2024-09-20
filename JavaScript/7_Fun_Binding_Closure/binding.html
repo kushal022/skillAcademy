@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Binding</title>
+</head>
+
+<body>
+    <h3>Function Binding</h3>
+    <script>
+        //object
+        const employee = {
+            firstName: "Hemant",
+            lastName: "Jangid",
+            //method
+            display: function () {
+                console.log(this.firstName + " " + this.lastName)
+            }
+        }
+        //call/invoke
+        // employee.display() // Hemant Jangid
+        //callback function [ display method]
+        // setInterval(employee.display, 1000) // undefined undefined
+        // setTimeout(employee.display, 1000)   // undefined undefined
+        //(this.firstName and this.secondName are undefined here)
+        //solution is use Bind() Method[it's use to call a function with 'this' value]
+
+        let dis = employee.display.bind(employee);
+        // setInterval(dis, 1000); //Hemant Jangid [iteration 1sec]
+        // setTimeout(dis, 3000);  // Hemant Jangid [time delay 3sec]
+
+
+        //2. Bind(); allows an object to borrow a method from another object without
+        //   making a copy of that method.
+
+        let animal = {
+            name: "Rabbit",
+            run: function (speed) {
+                console.log(this.name + " run at " + speed + " kmph")
+            }
+        };
+        let bird = {
+            name: "Eagle",
+            fly: function (speed) {
+                console.log(this.name + " fly at " + speed + " kmph")
+            }
+        }
+
+        // animal.run(80)
+
+        setTimeout(animal.run.bind(animal, 80));  //Rabbit run at 80 kmph
+        setTimeout(bird.fly.bind(bird, 40));      //Eagle fly at 40 kmph
+        //borrow animal's run method in bird obj
+        setTimeout(animal.run.bind(bird, 50));    //Eagle run at 50 kmph
+        let fn = animal.run.bind(bird, 20);
+        fn()                                   //Eagle run at 20 kmph  
+    </script>
+
+</body>
+
+</html>

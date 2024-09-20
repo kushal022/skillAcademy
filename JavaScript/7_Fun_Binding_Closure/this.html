@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+</head>
+
+<body>
+    <h3>this Keyword:</h3>
+    <script>
+        // 'use strict';
+
+        //The 'this' keyword refers to an object
+        //1. 'this' in object method:- refers to the obj
+        const obj = {
+            firstName: "Hemant",
+            lastName: "Jangid",
+            detail: function () {
+                // return firstName + " " + lastName;   //error: not defined,firstName and lastName
+                // return obj.firstName + " " + obj.lastName; // Hemant Jangid
+                //use 'this'
+                return this.firstName + " " + this.lastName;  // Hemant Jangid
+            }
+        }
+        console.log(obj.detail())
+
+        //2. 'this' keyword glabaly :- refers to the global obj(window obj)
+        var car = "Alto 800";
+        var price = '4 Lac'
+        // let price = '4 Lac'  // undefined
+
+        let cardetail = this.car + this.price;
+        console.log(cardetail)
+
+        //3. 'this' in function:- refers to global obj
+        var fname = "Chetan"; // global variable in global obj.
+        var lname = "Jangid";
+        function stud() {
+            return this.fname + this.lname; // ChetanJangid
+        }
+        console.log(stud())
+        //4. function in strict mode:- this is undefined
+        console.log(stud())  // error undefined
+
+        //5. Event
+        //6. Methods like call(),apply(),bind(); see later
+    </script>
+</body>
+
+</html>

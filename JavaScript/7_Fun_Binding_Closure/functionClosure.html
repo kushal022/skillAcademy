@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Closure</title>
+</head>
+
+<body>
+    <h3>Function Closure:</h3>
+    <script>
+        // inner function can access the outer function variable.
+        // preserves the outer scope within the inner scope.
+        // lexical scoping
+
+        var x = 4;
+        // global environment
+        function outer() {
+            // outer environment
+            var y = 5;
+            function inner() {
+                // inner environment
+                var z = 6;
+                return x + y + z;
+            }
+            return inner();
+        }
+        let result = outer();
+        console.log(result); // 15;
+
+
+        // Closure in Loops:
+        for (var index = 1; index <= 3; index++) {
+            setTimeout(function () {
+                console.log('after ' + index + ' second(s):' + index);
+            }, index * 1000);
+        }
+
+        //actual/ unexpected output:
+        //after 4 second(s):4
+        //after 4 second(s):4
+        //after 4 second(s):4
+
+        //In this code, you might expect it to log 
+        //Index: 1, Index: 2, and Index: 3 at one-second intervals. 
+        //However, it logs Index: 4 three times because the loop completes 
+        //before the setTimeout callbacks are executed, and 'index' ends up being 4.
+
+        //expected output:
+        // after 1 second(s):1
+        // after 2 second(s):2
+        // after 3 second(s):3
+
+        //To fix this, you can use closures to capture the current value 
+        //of 'index' for each iteration. One way to do this is by 
+        //using an Immediately Invoked Function Expression (IIFE):
+
+        for (var index = 1; index <= 3; index++) {
+            (function (index) {
+                setTimeout(function () {
+                    console.log('after ' + index + ' second(s):' + index);
+                }, index * 1000);
+            })
+                (index);
+        }
+        // output:
+        // after 1 second(s):1
+        // after 2 second(s):2
+        // after 3 second(s):3
+
+        //2. Alternatively, you can use let instead of 'var', 
+        // as 'let' is block-scoped and creates a new binding for each iteration:
+        for (let index = 1; index <= 3; index++) {
+            setTimeout(function () {
+                console.log('after ' + index + ' second(s):' + index);
+            }, index * 1000);
+        }
+
+        // output:
+        // after 1 second(s):1
+        // after 2 second(s):2
+        // after 3 second(s):3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
