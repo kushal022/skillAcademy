@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function problems</title>
+</head>
+
+<body>
+    <h3>Function Problems</h3>
+    <script>
+        //Problem1:
+        //Display a text in the console window using JavaScript Functions.
+        //sol.
+        function hello() {
+            console.log('Hello There!')
+        }
+        hello();
+        console.log('--------------------------------')
+        //Problem2:
+        //Print the username in the console window, using function paramenters.
+        //Get the user anem using the prompt window.
+        //sol.
+        // function userName() {
+        //     let pro = prompt("Enter a name: ");
+        //     return "Hello " + pro;
+        // }
+        // console.log(userName());
+        console.log('--------------------------------')
+        //Problem3:
+        //Add two numbers
+        function addition(num1, num2) {
+            return `The addition of '${num1}' and '${num2}' is: '${num1 + num2}'.`;
+        }
+        let result = addition(3, 8);
+        console.log(result)
+        console.log('--------------------------------')
+        //Poblem4:
+        //Sum two numbers,by using function parameter,return and prompt for getting user input.
+        //sol.
+        function addition(num1, num2) {
+            return `The addition of '${num1}' and '${num2}' is: '${num1 + num2}'.`;
+        }
+        let num1 = Number(prompt('Enter first number:'))
+        let num2 = Number(prompt('Enter second number:'))
+        let result2 = addition(num1, num2);
+        console.log(result2)
+
+    </script>
+</body>
+
+</html>
