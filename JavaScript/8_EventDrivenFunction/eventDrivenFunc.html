@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Driven Function</title>
+</head>
+
+<body>
+    <h3 id="heading1">Event Driven Function</h3>
+    <div id="demo1" onclick="myFun1()">Hello Event1,Click On Me!!</div><br>
+    <div id="demo2">Hello Event2,Click On Me!!</div><br>
+    <div id="demo3">Hello Event3,Click On Me!!</div><br>
+    <div id="demo4">Hello Event4, on mouse over !!</div><br>
+    <div id="demo5">Hello Keybord Event !!</div><br>
+    <div id="demo6">Hello Window/Document Event !!</div><br>
+    <div id="demo7">Hello Form Event !!</div><br>
+    <script>
+        ////// JavaScript Events
+        //1. Mouse Events
+        //2. Keyboard Events
+        //3. Document Events
+        //4. Form Events
+
+        //1. Mouse EVents:
+        //a. Event: click; Event Handler: onclick; when mouse click on an element.
+        function myFun1() {
+            document.getElementById("heading1").style.backgroundColor = "red"
+            console.log("onclick event handler 1 run")
+        }
+        // or
+        function myFun2() {
+            document.getElementById("heading1").style.backgroundColor = "yellow"
+            console.log("onclick event handler 2 run")
+        }
+        let demo2 = document.getElementById("demo2");
+        demo2.onclick = myFun2;// myFun is function refrence,that's why () not use;
+
+        //or
+        function myFun3() {
+            document.getElementById("heading1").style.backgroundColor = "blue"
+            console.log("onclick event handler (AddEventListener) 3 run")
+            demo3.innerText = "I am clicked by you sir!!"
+            //remove event listener
+            demo3.removeEventListener("click", myFun3)
+        }
+        let demo3 = document.getElementById("demo3");
+        demo3.addEventListener("click", myFun3);
+
+        //b. Event: mouseOver; Event Handler: onmouseover; when the cursor of the mouse
+        // comes over the elelment;
+        function myFun4() {
+            document.getElementById("heading1").style.backgroundColor = "gold"
+            console.log("onclick event handler 4 run")
+        }
+
+        let demo4 = document.getElementById("demo4")
+        demo4.onmouseover = myFun4;
+        // demo4.onmousedown = myFun4;
+        // demo4.onmouseup = myFun4;
+        // demo4.onmousemove = myFun4;
+        // demo4.onmouseenter = myFun4;
+        // demo4.onmouseleave = myFun4;
+        // demo4.onmouseout = myFun4;
+
+        //2. Keyboard Events:
+
+        function myFun5() {
+            document.getElementById("heading1").style.backgroundColor = "orange"
+            console.log("Keybord event handler  run")
+        }
+        let demo5 = document.getElementById("demo5")
+
+        demo5.onkeyup = myFun5;
+
+
+
+
+        //3. Wnidow/Document Events
+        function myFun6() {
+            document.getElementById("heading1").style.backgroundColor = "orange"
+            console.log("Keybord event handler  run")
+        }
+        let demo6 = document.getElementById("demo6")
+        let demo7 = document.getElementsByName("body");
+        // demo7.style.backgroundColor = "red"
+        document.body.onload = myFun6;
+
+
+
+
+
+    </script>
+</body>
+
+</html>
