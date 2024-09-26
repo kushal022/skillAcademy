@@ -16,6 +16,10 @@
     <div id="demo5">Hello Keybord Event !!</div><br>
     <div id="demo6">Hello Window/Document Event !!</div><br>
     <div id="demo7">Hello Form Event !!</div><br>
+    <input type="text" id="keyboardEv"><br><br>
+    <div id="demo8">Keyboard Event !!</div><br>
+    <!-- document event -->
+    <div id="demo9">Document Event !!</div><br>
     <script>
         ////// JavaScript Events
         //1. Mouse Events
@@ -65,29 +69,60 @@
         // demo4.onmouseout = myFun4;
 
         //2. Keyboard Events:
-
-        function myFun5() {
-            document.getElementById("heading1").style.backgroundColor = "orange"
+        //onkeydown
+        document.getElementById("keyboardEv").onkeydown = function () {
+            document.getElementById("demo8").style.backgroundColor = "orange"
+            document.getElementById("demo8").innerText = "key down"
             console.log("Keybord event handler  run")
         }
-        let demo5 = document.getElementById("demo5")
+        //onkeyup
+        document.getElementById("keyboardEv").onkeyup = function () {
+            document.getElementById("demo8").style.backgroundColor = "green"
+            document.getElementById("demo8").innerText = "key up"
+        };
 
-        demo5.onkeyup = myFun5;
+        //onkeypress
+        document.getElementById("keyboardEv").onkeypress = function () {
+            document.getElementById("demo8").style.backgroundColor = "blue"
+            document.getElementById("demo8").innerText = "on keypress"
+        };
+
 
 
 
 
         //3. Wnidow/Document Events
-        function myFun6() {
-            document.getElementById("heading1").style.backgroundColor = "orange"
-            console.log("Keybord event handler  run")
+        //onload
+        // window.onload = function(){}
+        document.body.onload = function () {
+            document.getElementById("demo9").style.backgroundColor = "orange"
+            console.log("Document is loaded")
         }
-        let demo6 = document.getElementById("demo6")
-        let demo7 = document.getElementsByName("body");
-        // demo7.style.backgroundColor = "red"
-        document.body.onload = myFun6;
+        //onunload
+        document.body.onunload = function () {
+            document.getElementById("demo9").style.backgroundColor = "green"
+            console.log("Document is Un-loaded")
+            //hard to see
+        }
+        //onfocus
+        document.getElementById("keyboardEv").onfocus = function () {
+            document.getElementById("demo9").style.backgroundColor = "red"
+            document.getElementById("demo9").innerText = "on focus"
+            //work when enter in input box/for input
+        };
+        //onresize
+        document.body.onresize = function () {
+            document.getElementById("demo9").style.backgroundColor = "gray"
+            document.getElementById("demo9").innerText = "Document resize"
+            //work when resize the page
+        };
 
+        //4. Form Events
+        //onsubmit
 
+        //onblur: when fthe focus is away from a form element
+
+        // onchange: when modifies or changes the value of a form element
 
 
 

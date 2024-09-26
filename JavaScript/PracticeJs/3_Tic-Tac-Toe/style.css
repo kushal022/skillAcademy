@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: rgb(34, 66, 58); */
+    background-color: #596e79;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-turn {
+    margin-top: 3rem;
+    font-family: cursive;
+    padding: 0px 3rem;
+    text-align: center;
+    width: 79vmin;
+
+}
+
+.gameName {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: #963106da;
+    width: 100%;
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: inset 0px 0px 13px 0px #ffffffb0;
+
+}
+
+.turn {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.game {
+    margin-top: 1rem;
+    width: 65vmin;
+    height: 65vmin;
+    background-color: #dfd3c3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 24px;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: inset 0px 0px 16px 0px black;
+}
+
+.btn-box {
+    width: 18vmin;
+    height: 18vmin;
+    font-size: 3.2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    background-color: #c7b198;
+    color: #963106;
+    border-radius: 1rem;
+    box-shadow: inset 0px 0px 34px 0px #ffffffb0;
+
+}
+
+.btn-reset {
+    padding: 15px 40px;
+    border-radius: 1rem;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-family: cursive;
+    background-color: #c7b198;
+    box-shadow: inset 0px 0px 16px 0px rgba(0, 0, 0, 0.476);
+    cursor: pointer;
+}
+
+.by-kushal {
+    font-family: cursive;
+    position: absolute;
+    top: -5%;
+    left: -15%;
+    rotate: -45deg;
+}
+
+.gif-box {
+    position: absolute;
+    width: 18vmin;
+    height: 18vmin;
+    top: 100%;
+    left: 37%;
+    /* transition: 5s; */
+    scale: 0;
+    animation: gifup;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+    display: none;
+}
+
+@keyframes gifup {
+    0% {
+        top: 100%;
+        scale: 0;
+        rotate: 80rad;
+    }
+
+    /* 0%{} */
+    /* 0%{} */
+    90% {
+        top: -20%;
+    }
+
+    100% {
+        top: 5%;
+        scale: 1;
+        transform: rotate(270deg) translateX(50px) rotate(-270deg);
+    }
+}
+
+
+.gif {
+    width: 100%;
+    height: 100%;
+}
+
+
+.show-msg,
+#newGame {
+    background-color: #bdad97db;
+    color: #503210;
+    padding: 20px;
+    width: 50vmin;
+    height: 18vmin;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: cursive;
+    border-radius: 1rem;
+    position: absolute;
+    top: 108%;
+    left: 50%;
+    translate: -50% -50%;
+    animation: popup;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    display: none;
+    cursor: pointer;
+    border: none;
+    box-shadow: inset 0px 0px 16px 0px rgba(0, 0, 0, 0.476);
+
+
+}
+
+#newGame {
+    width: 20vmin;
+    height: 6vmin;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    background-color: #00000030;
+    border: solid 1px;
+    padding: 6px;
+    /* display: none; */
+}
+
+#newGame:hover {
+    background-color: #00000055;
+}
+
+@keyframes popup {
+    0% {
+        /* translate: 0px; */
+        top: 108%;
+        scale: 0.5;
+    }
+
+    60% {
+        top: 30%;
+    }
+
+    70% {
+        top: 50%;
+    }
+
+    80% {
+        top: 40%;
+    }
+
+    90% {
+        top: 50%;
+        scale: 1;
+
+    }
+
+    95% {
+        top: 45%;
+        scale: 1;
+
+    }
+
+    98% {
+        top: 48%;
+        scale: 1;
+
+    }
+
+    100% {
+        /* translate: 0px; */
+        top: 50%;
+        scale: 1;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .game {
+        gap: 5px;
+        padding: 13px;
+    }
+
+    .btn-box {
+        font-size: 1.9rem;
+    }
+
+    .show-msg {
+        font-size: 1.2rem;
+        padding: 8px 7px;
+    }
+
+    #newGame {
+        font-size: 1rem;
+        padding: 1px;
+        margin-top: 53px;
+        width: 30vmin;
+    }
+
+    .turn {
+        font-size: 1.2rem;
+    }
+
+    .gameName {
+        font-size: 1.5rem;
+    }
+
+    .by-kushal {
+        font-size: 1rem;
+        top: -27%;
+        left: -19%;
+    }
+
+    .btn-reset {
+        padding: 8px 20px;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <h3>Array</h3>
+    <script>
+        // an arry is a single variable holding a list of elements.
+        //size is dynamic not fixed
+        //syntax: 
+        //1. var array_name = [value1,value2,value3....., valueN];
+
+        var students = ["Aman", "Akhil", "Nitesh", "Hemant"]
+        console.log(students)
+        //op:
+        /*
+        (4) ['Aman', 'Akhil', 'Nitesh', 'Hemant']
+        0:"Aman"
+        1:"Akhil"
+        2:"Nitesh"
+        3:"Hemant"
+        length:4
+        [[Prototype]]:Array(0)
+        */
+
+        //2. var arrayName = new Array(value1,value2,value3....., valueN); 
+        //The 'new' keyword is used to create an instance of an array.
+        var employees = new Array("Aman", "Akhil", "Nitesh", "Hemant")
+        console.log(employees)
+
+        /*
+      (4) ['Aman', 'Akhil', 'Nitesh', 'Hemant']
+      0:"Aman"
+      1:"Akhil"
+      2:"Nitesh"
+      3:"Hemant"
+      length:4
+      [[Prototype]]:Array(0)
+      */
+
+        // Access the array's  elements;
+        //syntax; array_name[index of element]
+        // index starts from 0,1,2,3,......n;
+
+        let element = employees[2]
+        console.log(element) //Netesh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
