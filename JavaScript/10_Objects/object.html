@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+
+<body>
+    <h3>JavaScript Objects</h3>
+    <script>
+        //JS- Object based programming language;
+        // Collaction of key:value; pairs;
+        // an object is a reference data type.
+        // properties can also be 'Globally visible'.
+        let student = {
+            name: "Kushal",
+            class: "VI",
+            status: "pass",
+            totalMarks: 100,
+        }
+
+        //Access
+        console.log(student.name) // Kushal
+        console.log(student.status) // pass
+
+        console.log(student) //{name: 'Kushal', class: 'VI', status: 'pass', totalMarks: 100}
+
+        console.log("---------------- update ----------------")
+        //-------------------------------------------
+        // Use to update value; (reference data type)
+        //ex:
+        let original = 0; // did not update
+        function updateVar(x) {
+            // x = 20;
+            x.totalMarks = 20;
+        }
+        // console.log("Original value: " + original) //0
+        // updateVar(original)
+        // console.log("Updated value: " + original) //0
+
+        console.log("Original value: " + student.totalMarks) //100
+        updateVar(student)
+        console.log("Updated value: " + student.totalMarks) //20
+        // obj updated;
+
+        console.log("---------------- Object Method ----------------")
+        //-------------------------------------------
+        // the object with the finction as a member is iknown as object methods.
+        // Methods are always attached to an object and are referenced by "this" keyword.
+
+        let student1 = {
+            name: "Kushal",
+            class: "VI",
+            status: "pass",
+            totalMarks: 100,
+            //Method
+            display: function () { // Method
+                console.log("Student Name: " + this.name +
+                    " of class " + this.class +
+                    " has marks " + this.totalMarks);
+            },
+            //propety name is number
+            20: 500,
+        }
+        // method call/invok function
+        // objectName.methodName();
+        //with():- method will be executed
+        student1.display(); // Student Name: Kushal of class VI has marks 100
+        //without():- the function definition will be returned
+        console.log(student1.display())// undefined
+        student1.display;
+        console.log(student1.display)
+        /*return
+        ƒ () { // Method
+                console.log("Student Name: " + this.name +
+                    " of class " + this.class +
+                    " has marks " + this.totalMarks);
+            }
+        */
+
+        console.log("---------------- this ----------------")
+        // this keyword refers to an object.
+        // value of this cannot be changed.
+        //in function definition, 'this' refers to the owner of the function.
+        // this.name means:- 'name' property of a person object.
+
+
+
+        console.log("---------------- .hasOwnProperty() ----------------")
+        //Check property in obj
+        // objectName.hasOwnProperty('property(key)name'); returns: ture/false
+        let isNamePresentInObj = student1.hasOwnProperty('name')
+        console.log('isNamePresentInObj: ', isNamePresentInObj) // true;
+        let isAgePresentInObj = student1.hasOwnProperty('age')
+        console.log('isAgePresentInObj: ', isAgePresentInObj) // false;
+
+
+        console.log("---------------- Update: key-values ----------------")
+        //1.----------- by dot:
+        student1.lastName = "Jangid"
+        let islastNamePresentInStudent1 = student1.hasOwnProperty('lastName')
+        console.log('islastNamePresentInStudent1: ', islastNamePresentInStudent1)
+
+        //2.------------ by []:
+        student1['mobileNo'] = 911023456224;
+        let isMobileNumberPresentInStudent1 = student1.hasOwnProperty('mobileNo')
+        console.log('isMobileNumberPresentInStudent1: ', isMobileNumberPresentInStudent1)// true
+        console.log(student1.mobileNo)
+
+        console.log("---------------- Access key-values ----------------")
+        //-------------------------------------------
+        //1.----- By dot: 
+        //obj.key ; returns value
+        console.log(student.name) // Kushal
+        console.log(student.status) // pass
+
+        //2.------- By []: 
+        //obj[key] ; returns value
+        console.log(student['name']) // Kushal
+
+        //3.------- if property name are numbers,or long string 
+        // it can be accessed using the bracket notation.
+
+        // console.log("The value of the key 20 is: " + student1.20) //Error
+        console.log("The value of the key '20' is: " + student1['20']) // 500
+        console.log("The value of the key '20' is: " + student1[20]) // 500
+        console.log("The value of the key 'name' is: " + student1['name']) // kushal
+        console.log("The value of the key 'status' is: " + student1['status']) // pass
+
+
+
+        console.log("---------------- Object Constructor ----------------")
+        //The 'object constructor function' is used to create an object type.
+        // By calling it with the 'new' keyword.
+        // we can create the obj if the same type.
+        function StudentStructure(name, sclass, status, totalMarks) {
+            this.name = name;
+            this.sclass = sclass;
+            this.status = status;
+            this.totalMarks = totalMarks;
+            this.fullName = function () { return this.name + " Sharma" }
+        }
+        let student2 = new StudentStructure('Punni', 'Iv', 'Pass', 90)
+        console.log(student2)
+        /*
+        StudentStructure {name: 'Punni', sclass: 'Iv', status: 'Pass', totalMarks: 90, fullName:f}
+        */
+        console.log(student2.name) // Punni
+        console.log(student2['totalMarks']) // 90;
+        console.log(student2.fullName()) // Punni Sharma;
+
+        // Built-in JavaScript Constructores:
+        // new String()
+        // new Number()
+        // new Boolean()
+        // new Object()
+        // new Array()
+        // new RegExp()
+        // new Function()
+        // new Date()
+
+
+        console.log("---------------- Object Maps ----------------")
+        // A Map has key-value paires.
+        // The key can be of any datatype.
+        // Map has a property to represent the size of the map.
+        // it is another data structure.
+
+        //Properties of Object Map:
+        ///// size: returns the number of Map elements.
+
+        //------------------------------ Methods of Object Map: ---------------------
+        //// new Map(): create a new Map object.
+        //// set(): sets the value for a key in a map.
+        //// get(): gets the value for a key in a map.
+        //// clear(): removes all the elemetns form a map.
+        //// delete(): removes a map element specified by a key.
+        //// has(): returns true if a key exists in map.
+
+        //// forEach(): Invokes a callback for eack key/value pair in a map.
+        //// entries(): returns an iterator object with the [key,value] pairs in a map.
+        //// keys(): returns an iterator object of the keys in a map.
+        //// values(): returns an iterator object of the keys in a map.
+
+        let student3 = new Map();
+        //----- set properties:
+        student3.set('name', 'Kushal')
+        student3.set('class', 'XII')
+        student3.set('status', 'pass')
+
+        console.log(student3)
+        //Output:- 
+        /*
+        Map(3) {'name' => 'Kushal', 'class' => 'XII', 'status' => 'pass'}
+            [[Entries]]
+            0:{"name" => "Kushal"}
+            1:{"class" => "XII"}
+            2:{"status" => "pass"}
+            size:3
+            [[Prototype]]:Map
+        */
+
+        //--------- size:
+        console.log('student3 Map size: ', student3.size) // 3
+        //--------- Access property: by get() not dot
+        console.log('student3 Map "name" property: ', student3.name) // undefined; not work use get() methode
+        console.log('student3 Map "name" property: ', student3.get('name')) // Kushal
+        //----------- delete property:
+        console.log('student3 Map delete "status" property: ', student3.delete('status')) // true
+        console.log('student3 Map "status" property: ', student3.get('status')) // undefined
+        //---------- set propety:
+        console.log('student3 Map set "status" property: ', student3.set('status', 'Pass')) // true
+
+
+        //--------- forEach():
+        student3.forEach(function (value, key) {
+            console.log(key, value);
+        })
+        /*
+        Kushal name
+        XII class
+        Pass status
+        */
+
+        //-------- keys():
+        console.log(student3.keys()); // MapIterator {'name', 'class', 'status'}
+        //-------- values():
+        console.log(student3.values()); // MapIterator {'Kushal', 'XII', 'Pass'}
+        //-------- entries():
+        console.log(student3.entries());
+        // MapIterator {'name' => 'Kushal', 'class' => 'XII', 'status' => 'Pass'}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
