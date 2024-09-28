@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Array</title>
+</head>
+
+<body>
+    <h3>JavaScript: Advance Array</h3>
+
+    <script>
+
+        console.log('---------------- Multidimensional Array: --------------------');
+        /*
+        Multidimensional Array:
+        ● Multidimensional Array is also known as 'array' of 'array'.
+        ● JavaScript does not have inbuilt support for 'multi-dimensional arrays'.
+        ● So we need to create an array inside an array to make it work as a Multidimensional Array.
+        */
+
+        //--------------- Creating multidimensional Array:
+        let students = [
+            ['Kushal Jangid', 'VIII', 90, 324, 'Pass'],
+            ['Hemant Jangid', 'V', 190, 343, 'Pass'],
+            ['Chetan Jangid', 'VI', 290, 434, 'Pass'],
+            ['Punni Jangid', 'IV', 903, 346, 'Fail'],
+        ];
+        //---------------- Accessing-----------
+        //1.--------------Simple index-based notation---------------------
+        console.log(students)
+        //output:
+        /*
+        (4) [Array(5), Array(5), Array(5), Array(5)]
+        0:(5) ['Kushal Jangid', 'VIII', 90, 324, 'Pass']
+        1:(5) ['Hemant Jangid', 'V', 190, 343, 'Pass']
+        2:(5) ['Chetan Jangid', 'VI', 290, 434, 'Pass']
+        3:(5) ['Punni Jangid', 'IV', 903, 346, 'Fail']
+        length:4
+        [[Prototype]]:Array(0)
+        */
+        console.log(students[1])// (5) ['Hemant Jangid', 'V', 190, 343, 'Pass']
+        console.log(students[1][0])//Hemant Jangid
+        console.log(students[0][0])//Kushal Jangid
+        console.log(students[0][3])//324
+        console.log(students[3][0])//Punni Jangid
+
+        //2.-------------- For many iterations ---------------------
+
+        //outer array
+        for (let i = 0; i < students.length; i++) {
+            console.log('----------')
+            let student = students[i];
+            //inner array loop
+            for (let j = 0; j < student.length; j++) {
+                console.log(student[j])
+            }
+        }
+
+        //---------------------------- Adding elements in multidimensional ------------------------
+        // There are two ways to add an element in multidimensional array.
+        // ● Inner Array
+        // ● Outer Array 
+        // Adding elements to inner Array
+        // ○ Square Bracket Notation 
+        students[1][5] = 'This is a note for parents'
+        console.log(students[1]) //(6) ['Hemant Jangid', 'V', 190, 343, 'Pass', 'This is a note for parents']
+        // ○ push() Method 
+        students[2].push('Hello !!')
+        console.log(students[2]) //(6) ['Chetan Jangid', 'VI', 290, 434, 'Pass', 'Hello !!']
+
+        // Adding elements to outer Array 
+        students.push(['Loki Jangid', 'I', 120, 353, 'Pass'])
+        console.log(students[4]) //(5) ['Loki Jangid', 'I', 120, 353, 'Pass']
+
+
+        //----------------- Removing Elements in Multidimensional Array
+        // ● The pop() method is used to remove elements from the inner array.
+        students[2].pop();
+        console.log(students[2]) //(6) ['Chetan Jangid', 'VI', 290, 434, 'Pass']
+
+        // ● The entire inner arraycan beremovedfrom the outer array with thepop()method.
+        students.pop()
+        console.log(students[4]) // undefined
+
+
+        console.log('---------------- Referential Array: --------------------');
+        //---------------------------- Array as Objects
+        // ● Arrays are aspecial type of object.
+        // ● In Javascript,typeOf operator is used to return anarray object.
+        // ● Numbers are used to access the elements of an "array".
+        let std = ['Hemant Jangid', 'V', 190, 343, 'Pass'];
+        let person = std[0]
+        console.log(person) // Hemant Jangid;
+
+        // ● Names are used to access the members of an "object".
+        let std2 = { fullName: 'Hemant Jangid', class: 'V', marks: 190, status: 'Pass' };
+        let person2 = std2.fullName;
+        console.log(person2) // Hemant Jangid;
+
+        // array as object.
+        std3 = new Array()
+        std3['kushall'] = 'jangid';
+        std3['class'] = '8th';
+        std3['marks'] = 890;
+        std3['status'] = 'Pass';
+        console.log(std3)
+        // outpur: it's like an object.
+        /*
+            [kushall: 'jangid', class: '8th', marks: 890, status: 'Pass']
+            class:"8th"
+            kushall:"jangid"
+            marks:890
+            status:"Pass"
+            length:0
+            [[Prototype]]:Array(0)
+        */
+
+        //lets call
+        console.log(std3.class) // 8th;
+        console.log(std3['class']) // 8th
+
+        // ● An array can have different types of 'variables'.
+        //    I.e
+        //    Array can have 'arrays'
+        //    Array can have 'functions'
+        //    Array can have 'objects'
+
+        let myArray = new Array();
+        myArray[0] = "Kushal"
+        myArray[1] = new Date;
+        myArray[2] = ['hello', 'java', 'script'];
+        myArray[3] = function () { console.log('This is function in Array!') }
+        myArray[4] = { car: 'Curve TATA', model: 2024, wheel: '24inchs' }
+
+        console.log(myArray)
+        /*
+            (5) ['Kushal', Sat Sep 28 2024 14:42:34 GMT+0530 (India Standard Time), Array(3), ƒ, {…}]
+                0:"Kushal"
+                1:Sat Sep 28 2024 14:42:34 GMT+0530 (India Standard Time) {}
+                2:(3) ['hello', 'java', 'script']
+                3:ƒ ()
+                4:{car: 'Curve TATA', model: 2024, wheel: '24inchs'}
+                length:5
+                [[Prototype]]:Array(0)
+        */
+        //access
+        myArray[3]() // This is function in Array!
+        console.log(myArray[1]) // Sat Sep 28 2024 14:47:54 GMT+0530 (India Standard Time)
+        console.log(myArray[4]) // {car: 'Curve TATA', model: 2024, wheel: '24inchs'}
+        console.log(myArray[4].car) // Curve TATA
+        console.log(myArray[4].model) // 2024
+        console.log(myArray[4]['model']) // 2024
+        console.log(myArray[2][1]) // java
+        console.log(myArray[2][0]) // hello
+
+
+        // ● In Javascript, arrays with named indexes are not supported.
+        console.log(std.class) // undefined;
+        console.log(std[1]) // V ;
+
+        // ● If we use named indexes in javascript, arrays will be redefined as objects.
+        console.log(std3.class) // 8th; std3 is array but it is defined as object.
+
+        console.log('---------------- Array Methods: --------------------');
+
+        /*
+        JavaScript Array Methods: 
+        -------- Method ------------ ------------------ Description -------------
+        ---------concat()            Joins two or more arrays and returns a copy of the joined arrays 
+        ---------copyWithin()        Copies array elements within the array, to and from specified positions.
+        ---------entries()           Returns a key/value pair Array Iteration Object.
+        ---------every()             Checks if every element in an array pass a test.
+        ---------fill()              Fill the elements in an array with a static value.
+        ---------filter()            Creates a new array with every element in an array that pass a test.
+        ---------find()              Returns the value of the first element in an array that passa test.
+        ---------findIndex()         Returns the index of the first element in an array that passa test.
+        ---------forEach()           Calls a function for each array element.
+        ---------from()              Creates an array from an object.
+        ---------includes()          Check if an array contains the specified element.
+        ---------indexOf()           Search the array for an element and returns its position.
+        ---------isArray()           Checks whether an object is an array.
+        ---------join()              Joins all elements of an array into a string.
+        ---------keys()              Returns a Array Iteration Object, containing the keys of theoriginal array.
+        ---------lastIndexOf()       Search the array for an element, starting at the end, and returns its position.
+        ---------map()               Creates a new array with the result of calling a function for each array element.
+        ---------pop()               Removes the last element of an array, and returns that element.
+        ---------push()              Adds new elements to the end of an array, and returns the new length.
+        ---------shift()             Removes the first element of an array, and returns that element.
+        ---------unshift()           Adds new elements to the beginning of an array, and returns the new length.
+        ---------reduce()            Reduce the values of an array to a single value (going left-to-right).
+        ---------reduceRight()       Reduce the values of an array to a single value (going right-to-left).
+        ---------reverse()           Reverses the order of the elements in an array.
+        ---------slice()             Selects a part of an array, and returns the new array.
+        ---------splice()            Adds/Removes elements from an array.
+        ---------sort()              Sorts the elements of an array.
+        ---------some()              Checks if any of the elements in an array pass a test.
+        ---------toString()          Converts an array to a string, and returns the result.
+        ---------valueOf()           Returns the primitive value of an array.
+        
+        ------------------------------------- Array Properties -------------------------------------------
+        ---------constructor         Returns the function that created the Array object's prototype.
+        ---------length              Sets or returns the number of elements in an array.
+        ---------prototype           Allows you to add properties and methods toan Array object.
+
+
+
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
