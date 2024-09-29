@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #001122;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #182531;
+    height: 25rem;
+    width: 25rem;
+    border: solid 2px #434547;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: inset 0px 0px 45px 0px #00070d, 0px 0px 45px 0px #00070d;
+    position: relative;
+
+}
+
+.clock {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock::before {
+    content: '';
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+}
+
+.clock::after {
+    content: 'By Kushal';
+    position: absolute;
+    top: 5rem;
+    font-size: 1rem;
+    font-family: cursive;
+}
+
+/* set clock numbers */
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 1px;
+    text-align: center;
+    /* background-color: rgba(255, 0, 0, 0.135); */
+}
+
+.clock span b {
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+    font-family: cursive;
+
+}
+
+/* Hands */
+.hands {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hands i {
+    /* height: 80px; */
+    height: var(--hyt);
+    width: 4px;
+    /* background-color: wheat; */
+    background-color: var(--clr);
+    position: absolute;
+    border-radius: 5px;
+}
