@@ -128,9 +128,9 @@ function next() {
 main()
 
 // this is callback:
-function main1(next) {
+function main1(next) {  // higher order function
     display('Main-1 is called')
-    next()
+    next()// callback
 }
 function next1() {
     display('Next-1 is called')
